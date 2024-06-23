@@ -1,0 +1,232 @@
+---
+tags:
+  - courses
+  - computer-science
+Creation: 2023-12-13
+chapter: 1
+---
+
+> [!quote]- Veritas Vos Liberabit
+>
+> > <cite>The Truth Will Set You Free</cite>
+
+## Struktur Program Bahasa Java
+
+```java
+public class HelloWorld {
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+	}
+}
+```
+
+`public class HelloWorld` pada kode di atas mengawali definisi kelas bernama `HelloWorld`. Kata kunci `public` disebut sebagai _access modifier_ dan kata kunci `class` untuk mendefinisikan kelas dari objek di Java, yang merupakan wadah logis program dari sekumpulan data dan metode. setelah kata kunci `class`, dituliskan nama kelas yang menggunakan aturan umum penulisan identifier. Konvensi nama kelas adalah kata benda dengan **huruf kapital di awal kata** yang berarti. **Nama file** harus **sama dengan nama class** public-nya. Komentar dapat ditulis sebagai penjelasan pada kode program. Program Java harus selalu diakhiri dengan ekstensi file .java.
+
+`public static void main(String[] args)` merupakan **entry point** atau **jalan masuk** dari program. `public` berarti metode **dapat dipanggil dari mana pun**, `static` berarti sama **untuk semua instan kelas**, dan `void` berarti **tidak mengembalikan nilai**. `System.out.println()` berfungsi untuk **menampilkan output**.
+
+Sementara itu, terdapat juga karakter-karakter spesial yang sering digunakan dalam program java.
+
+| Character | Nama                 | Deskripsi                                   |
+| --------- | -------------------- | ------------------------------------------- |
+| `{}`      | Tanda Kurung Kurawal | Menandai blok untuk statement               |
+| `()`      | Tanda Kurung         | Digunakan dalam methods                     |
+| `[]`      | Tanda Kurung Siku    | Menandai array                              |
+| `//`      | Double Slash         | Digunakan untuk komentar                    |
+| `""`      | Tanda Petik Ganda    | Menandai sebuah string                      |
+| `;`       | Titik Koma           | Digunakan untuk mengakhiri sebuah statement |
+
+### Komentar
+
+Komentar **tidak akan dieksekusi** dalam program dan tidak menambah ukuran dari bytecodes. Ada tiga macam komentar di Java, yaitu sebagai berikut.
+
+```java
+/* semua karakter yang berada di antara tanda ini akan diabaikan */
+// semua karakter akan diabaikan hingga akhir baris
+/** semua karakter yang berada di dalam tanda ini akan diabaikan dan membuat dokumentasi otomatis dengan tool javadoc */
+```
+
+### Karakter
+
+Program Java ditulis menggunakan subset karakter Unicode, yaitu sebagai berikut.
+
+- Huruf besar A-Z
+- Huruf kecil a-z
+- Digit 0-9
+- Karakter khusus seperti `!`, `&`, `+`, `\`, `_`, dan lain sebagainya
+- Kode kontrol (Seperti `formfeed` dan `newline`)
+  Unicode tidak hanya huruf latin, melainkan juga digunakan huruf-huruf bangsa lain, seperti Jepang, Korea, Jerman, dan bahkan Bengali. Memori yang digunakan adalah 2 byte (16 bit)
+
+## Keyword dan Identifier
+
+### Keyword
+
+Merupakan **identifier khusus** dan **tidak diperbolehkan** digunakan **untuk identifier lain**. Berikut adalah daftar lengkap mengenai keywords yang ada di Java.
+[List of Java keywords - Wikipedia](https://en.wikipedia.org/wiki/List_of_Java_keywords)
+
+### Identifier
+
+Merupakan **nama berbagai elemen program**, seperti nama variabel, metode, kelas, keyword, dan sebagainya.
+
+**Karakter pertama** harus **berupa huruf** atau `_` atau `$`. Namun dianjurkan untuk tidak menggunakan `_` dan `$`. **Karakter kedua dan seterusnya** dapat berupa **huruf atau angka**. Huruf besar dianggap berbeda dengan huruf kecil (case sensitive). **Tidak ada batas** panjang, tetapi **tidak boleh menggunakan keyword**. Contoh identifier yang benar adalah `nama, x1, total, cubic, namaPegawai` dan yang salah adalah `1kali, int`.
+
+## Literal
+
+Merupakan **nilai data** yang dituliskan pada kode sumber/program. Ada lima macam literal di Java, yaitu Integer, Floating Point, Boolean, Character, dan String.
+
+### Integer
+
+Literal integer atau bilangan bulat dapat direpresentasikan dalam **bentuk desimal** (10), **oktal** (8), dan **heksadesimal** (16). Hanya bentuk desimal yang boleh diberi tanda positif (+) dan negatif (-). Bentuk oktal ditandai dengan angka `0` di awal. Sedangkan bentuk heksadesimal diawali dengan `0x` atau `0X`. Berikut adalah contoh dari literal integer.
+
+```java
+175 // bilangan desimal 175 (10)
+075 // bilangan oktal 178 (8) = 61 desimal
+0x75 atau 0X75 // bilangan heksadesimal 75 (16) = 117 desimal
+-75 // negatif 75 desimal
++75 // positif 75 desimal
+```
+
+### Floating Point
+
+Merupakan **representasi dari bilangan desimal** yang **mempunyai titik desimal** (bagian pecahan), misalnya `7.4567`. Literal floating point **boleh bertanda positif (+), negatif (-), maupun tidak bertanda**. Misalnya `+7.4567, -7.4567, 7.4567`. Penulisan literal floating point dapat menggunakan notasi standar maupun ilmiah/scientific. Default floating point bertipe `double` (64 bit). Bila diinginkan bertipe `float` (32 bit), maka harus ditambahkan simbol huruf `f` atau `F` di akhir bilangan. Misalnya `7.4567f` atau `7.4567F`. Berikut adalah contoh dari literal floating point.
+
+```java
+0.75 // 0,75 atau 75/100
++0.1 // +0,1 atau 1/10
+-0.9876 // negatif 0,9876
+2.0e2 atau 2e2 // 2*(10**2)
+2E+25 // 2*(10**25)
+-75e-011 // -75*(10**(-11))
++75.E25F // +75*(10**25) bertipe float (32 bit)
+```
+
+### Karakter
+
+Literal karakter direpresentasikan sebagai **karakter Unicode tunggal** dan dituliskan dengan diapit **tanda petik tunggal**. Contohnya adalah sebagai berikut.
+
+```java
+'A' // karakter huruf A kapital
+'a' // karakter huruf a standard
+'8' // karakter angka 8, bukan angka 8
+'#' // karakter simbol hashtag
+```
+
+### Escape Sequences
+
+Berikut adalah beberapa escape sequences yang digunakan di Java.
+
+```java
+\b // backspace
+\t // horizontal tab
+\n // new line, line end
+\r // carriage return
+\' // single quote
+\" // double quote
+\\ // backslash
+\xdd // notasi hexadecimal
+\ddd // notasi octal
+```
+
+### Boolean
+
+Literal boolean dipergunakan untuk menuliskan nilai data boolean yang berisi **true** atau **false**. Penulisannya adalah sebagai berikut.
+
+```java
+true // benar
+false // salah
+```
+
+### String
+
+Literal String **bisa berisi karakter khusus** seperti `newline`, `tab`, dan sebagainya. Berikut adalah contoh dari literal string.
+
+```java
+"Bahasa\nKomputer" // Memberi newline antara bahasa dan komputer
+"Nama\t:\tHerman" // antara "Nama" dengan ":" dan ":" dengan "Herman" terdapat horisontal tab
+"Teks\"Hallo\"" // kata Hallo diapit oleh tanda petik ganda
+```
+
+## Tipe Data
+
+Java memiliki 8 tipe **data primitif**, dengan rincian berikut.
+
+| Tipe Data | Memori | Nilai Minimum             | Nilai Maksimum             |
+| --------- | ------ | ------------------------- | -------------------------- |
+| byte      | 8 bit  | -128                      | 127                        |
+| short     | 16 bit | -32768                    | 32767                      |
+| int       | 32 bit | -2147483648               | 2147483648                 |
+| long      | 64 bit | -9223372036854775808      | 9223372036854775808        |
+| float     | 32 bit | ±1.40239846E-45           | ±3.40282347E+38            |
+| double    | 64 bit | ±4.94065645841246544E-324 | ±1.7976931348623157 0E+308 |
+| char      | 16 bit | \u0000                    | \uFFFF                     |
+| boolean   |        | true or false             |
+
+Selain tipe data primitif, Java juga memiliki tipe data **non-primitive** seperti **String, Character, Integer, dan lain sebagainya**. Tipe data non-primitif tersebut dapat ditandai dengan keyword **huruf awal** keyword berupa **kapital**.
+
+## Variabel
+
+Merupakan sebuah **identifier untuk menyimpan nilai data** yang **dapat diubah nilai datanya**. Variabel memiliki tipe data dan identifier. Tipe data menandakan tipe nilai data yang dapat disimpan di variabel tersebut. Identifier variabel harus mengikuti aturan umum identifier. Deklarasi variabel dapat dilakukan dengan cara berikut ini.
+
+```java
+// tipe-data identifier [, identifier] [= nilai awal];
+// tanda [] bersifat opsional
+// contoh deklarasi variabel
+int a;
+float ipSem, ipKum, ipLulus;
+double minimum = 0.0, maksimum = 1250000.0;
+boolean cek, lulus = false;
+```
+
+### Case
+
+Perlu diperhatikan bahwa penulisan variabel dalam Java biasanya menggunakan Camel Case atau Pascal Case. Berikut adalah contoh dari berbagai case yang sering digunakan dalam semua bahasa pemrograman.
+
+```java
+int nilaiAkhir, nilaiTugas, nilaiPraktikum // camel case
+int NilaiAkhir, NilaiTugas, NilaiPraktikum // pascal case
+int nilai_akhir, nilai_tugas, nilai_praktikum // snake case
+int nilai-akhir, nilai-tugas, nilai-praktikum // kebab case
+int NILAI_AKHIR, NILAI_TUGAS, NILAI_PRAKTIKUM // screaming snake case
+```
+
+## Konstanta dan Enum
+
+### Konstanta
+
+Merupakan identifier untuk menyimpan nilai data yang **tidak dapat diubah nilai datanya**. Konstanta memiliki tipe data, identifier, dan nilai konstan. Tipe data menandakan tipe nilai data yang disimpan di konstanta tersebut. Identifier konstanta harus mengikuti aturan umum identifier. Deklarasi konstanta dapat dilihat melalui kode berikut.
+
+```java
+// final tipe-data identifier = nilai [, identifier = nilai];
+// tanda [] bersifat opsional
+// contoh deklarasi konstanta
+final int K = 100;
+final double MIN = 0.0, MAKS = 1000000.0;
+final double PI = 3.142;
+```
+
+Konstanta dituliskan dengan **huruf kapital semua**, seperti screaming snake case.
+
+### Enum
+
+Merupakan sebuah tipe data spesial yang memungkinkan suatu **variabel berisi konstanta yang sudah didefinisikan** sebelumnya. Enum biasanya digunakan untuk himpunan bernama. Contohnya adalah sebagai berikut
+
+```java
+/* lampu lalu lintas hanya bisa red, yellow, green
+tingkat kesulitan hanya bisa mudah, sedang, sulit
+hari hanya bisa senin, selasa, rabu, kamis, jumat, sabtu, minggu
+arah mata angih hanya bisa utara, timur, selatan, barat */
+
+// deklarasi enum
+// public enum NamaEnum {KONSTANTA1, KONSTANTA2}
+enum LampuLaluLintas {RED, YELLOW, GREEN};
+enum Kesulitan {MUDAH, SEDANG, SULIT};
+enum Hari {SENIN, SELASA, RABU, KAMIS, JUMAT, SABTU, MINGGU};
+enum Arah {UTARA, TIMUR, SELATAN, BARAT};
+
+// penggunaan enum
+LampuLaluLintas light = LampuLaluLintas.RED;
+Kesulitan level = Kesulitan.MUDAH;
+Hari hari = Hari.MINGGU;
+Arah arah = Arah.SELATAN;
+```
+
+Enum juga dapat didefinisikan seperti layaknya kelas/class. Hal tersebut akan dibahas pada materi pemrograman lanjut/berorientasi objek dengan Java.
