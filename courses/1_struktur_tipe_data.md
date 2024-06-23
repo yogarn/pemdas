@@ -6,10 +6,7 @@ Creation: 2023-12-13
 chapter: 1
 ---
 
-> [!quote]- Veritas Vos Liberabit
->
-> > <cite>The Truth Will Set You Free</cite>
-
+# Struktur, Tipe Data, Konstanta, dan Variable Java
 ## Struktur Program Bahasa Java
 
 ```java
@@ -20,7 +17,7 @@ public class HelloWorld {
 }
 ```
 
-`public class HelloWorld` pada kode di atas mengawali definisi kelas bernama `HelloWorld`. Kata kunci `public` disebut sebagai _access modifier_ dan kata kunci `class` untuk mendefinisikan kelas dari objek di Java, yang merupakan wadah logis program dari sekumpulan data dan metode. setelah kata kunci `class`, dituliskan nama kelas yang menggunakan aturan umum penulisan identifier. Konvensi nama kelas adalah kata benda dengan **huruf kapital di awal kata** yang berarti. **Nama file** harus **sama dengan nama class** public-nya. Komentar dapat ditulis sebagai penjelasan pada kode program. Program Java harus selalu diakhiri dengan ekstensi file .java.
+`public class HelloWorld` pada kode di atas mengawali definisi kelas bernama `HelloWorld`. Kata kunci `public` disebut sebagai _access modifier_ dan kata kunci `class` untuk mendefinisikan kelas dari objek di Java, yang merupakan wadah logis program dari sekumpulan data dan metode. setelah kata kunci `class`, dituliskan nama kelas yang menggunakan aturan umum penulisan identifier. Konvensi nama kelas adalah kata benda dengan **huruf kapital di awal kata** yang berarti. **Nama file** harus **sama dengan nama class** public-nya. Komentar dapat ditulis sebagai penjelasan pada kode program. Program Java harus selalu diakhiri dengan ekstensi file `.java`.
 
 `public static void main(String[] args)` merupakan **entry point** atau **jalan masuk** dari program. `public` berarti metode **dapat dipanggil dari mana pun**, `static` berarti sama **untuk semua instan kelas**, dan `void` berarti **tidak mengembalikan nilai**. `System.out.println()` berfungsi untuk **menampilkan output**.
 
@@ -57,25 +54,18 @@ Program Java ditulis menggunakan subset karakter Unicode, yaitu sebagai berikut.
   Unicode tidak hanya huruf latin, melainkan juga digunakan huruf-huruf bangsa lain, seperti Jepang, Korea, Jerman, dan bahkan Bengali. Memori yang digunakan adalah 2 byte (16 bit)
 
 ## Keyword dan Identifier
-
 ### Keyword
-
-Merupakan **identifier khusus** dan **tidak diperbolehkan** digunakan **untuk identifier lain**. Berikut adalah daftar lengkap mengenai keywords yang ada di Java.
-[List of Java keywords - Wikipedia](https://en.wikipedia.org/wiki/List_of_Java_keywords)
+Merupakan **identifier khusus** dan **tidak diperbolehkan** digunakan **untuk identifier lain**. Berikut adalah daftar lengkap mengenai keywords yang ada di Java[^1].
 
 ### Identifier
-
-Merupakan **nama berbagai elemen program**, seperti nama variabel, metode, kelas, keyword, dan sebagainya.
-
-**Karakter pertama** harus **berupa huruf** atau `_` atau `$`. Namun dianjurkan untuk tidak menggunakan `_` dan `$`. **Karakter kedua dan seterusnya** dapat berupa **huruf atau angka**. Huruf besar dianggap berbeda dengan huruf kecil (case sensitive). **Tidak ada batas** panjang, tetapi **tidak boleh menggunakan keyword**. Contoh identifier yang benar adalah `nama, x1, total, cubic, namaPegawai` dan yang salah adalah `1kali, int`.
+Merupakan **nama berbagai elemen program**, seperti nama variabel, metode, kelas, keyword, dan sebagainya.  
+**Karakter pertama** harus **berupa huruf** atau `_` atau `$`. Namun dianjurkan untuk tidak menggunakan `_` dan `$`. **Karakter kedua dan seterusnya** dapat berupa **huruf atau angka**. Huruf besar dianggap berbeda dengan huruf kecil (case sensitive). **Tidak ada batas** panjang, tetapi **tidak boleh menggunakan keyword**. Contoh identifier yang benar adalah `nama`, `x1`, `total`, `cubic`, `namaPegawai` dan yang salah adalah `1kali`, `int`.
 
 ## Literal
-
 Merupakan **nilai data** yang dituliskan pada kode sumber/program. Ada lima macam literal di Java, yaitu Integer, Floating Point, Boolean, Character, dan String.
 
 ### Integer
-
-Literal integer atau bilangan bulat dapat direpresentasikan dalam **bentuk desimal** (10), **oktal** (8), dan **heksadesimal** (16). Hanya bentuk desimal yang boleh diberi tanda positif (+) dan negatif (-). Bentuk oktal ditandai dengan angka `0` di awal. Sedangkan bentuk heksadesimal diawali dengan `0x` atau `0X`. Berikut adalah contoh dari literal integer.
+Literal integer atau bilangan bulat dapat direpresentasikan dalam **bentuk desimal** (10), **oktal** (8), dan **heksadesimal** (16). Hanya bentuk desimal yang boleh diberi tanda positif (+) dan negatif (-). Bentuk oktal ditandai dengan angka `0` di awal. Sedangkan bentuk heksadesimal diawali dengan `0x` atau `0X`. Berikut adalah contoh dari literal integer.  
 
 ```java
 175 // bilangan desimal 175 (10)
@@ -86,8 +76,7 @@ Literal integer atau bilangan bulat dapat direpresentasikan dalam **bentuk desim
 ```
 
 ### Floating Point
-
-Merupakan **representasi dari bilangan desimal** yang **mempunyai titik desimal** (bagian pecahan), misalnya `7.4567`. Literal floating point **boleh bertanda positif (+), negatif (-), maupun tidak bertanda**. Misalnya `+7.4567, -7.4567, 7.4567`. Penulisan literal floating point dapat menggunakan notasi standar maupun ilmiah/scientific. Default floating point bertipe `double` (64 bit). Bila diinginkan bertipe `float` (32 bit), maka harus ditambahkan simbol huruf `f` atau `F` di akhir bilangan. Misalnya `7.4567f` atau `7.4567F`. Berikut adalah contoh dari literal floating point.
+Merupakan **representasi dari bilangan desimal** yang **mempunyai titik desimal** (bagian pecahan), misalnya `7.4567`. Literal floating point **boleh bertanda positif (+), negatif (-), maupun tidak bertanda**. Misalnya `+7.4567, -7.4567, 7.4567`. Penulisan literal floating point dapat menggunakan notasi standar maupun ilmiah/scientific. Default floating point bertipe `double` (64 bit). Bila diinginkan bertipe `float` (32 bit), maka harus ditambahkan simbol huruf `f` atau `F` di akhir bilangan. Misalnya `7.4567f` atau `7.4567F`. Berikut adalah contoh dari literal floating point.  
 
 ```java
 0.75 // 0,75 atau 75/100
@@ -100,8 +89,7 @@ Merupakan **representasi dari bilangan desimal** yang **mempunyai titik desimal*
 ```
 
 ### Karakter
-
-Literal karakter direpresentasikan sebagai **karakter Unicode tunggal** dan dituliskan dengan diapit **tanda petik tunggal**. Contohnya adalah sebagai berikut.
+Literal karakter direpresentasikan sebagai **karakter Unicode tunggal** dan dituliskan dengan diapit **tanda petik tunggal**. Contohnya adalah sebagai berikut.  
 
 ```java
 'A' // karakter huruf A kapital
@@ -111,8 +99,7 @@ Literal karakter direpresentasikan sebagai **karakter Unicode tunggal** dan ditu
 ```
 
 ### Escape Sequences
-
-Berikut adalah beberapa escape sequences yang digunakan di Java.
+Berikut adalah beberapa escape sequences yang digunakan di Java.  
 
 ```java
 \b // backspace
@@ -127,8 +114,7 @@ Berikut adalah beberapa escape sequences yang digunakan di Java.
 ```
 
 ### Boolean
-
-Literal boolean dipergunakan untuk menuliskan nilai data boolean yang berisi **true** atau **false**. Penulisannya adalah sebagai berikut.
+Literal boolean dipergunakan untuk menuliskan nilai data boolean yang berisi **true** atau **false**. Penulisannya adalah sebagai berikut.  
 
 ```java
 true // benar
@@ -136,8 +122,7 @@ false // salah
 ```
 
 ### String
-
-Literal String **bisa berisi karakter khusus** seperti `newline`, `tab`, dan sebagainya. Berikut adalah contoh dari literal string.
+Literal String **bisa berisi karakter khusus** seperti `newline`, `tab`, dan sebagainya. Berikut adalah contoh dari literal string.  
 
 ```java
 "Bahasa\nKomputer" // Memberi newline antara bahasa dan komputer
@@ -146,8 +131,7 @@ Literal String **bisa berisi karakter khusus** seperti `newline`, `tab`, dan seb
 ```
 
 ## Tipe Data
-
-Java memiliki 8 tipe **data primitif**, dengan rincian berikut.
+Java memiliki 8 tipe **data primitif**, dengan rincian berikut.  
 
 | Tipe Data | Memori | Nilai Minimum             | Nilai Maksimum             |
 | --------- | ------ | ------------------------- | -------------------------- |
@@ -163,8 +147,7 @@ Java memiliki 8 tipe **data primitif**, dengan rincian berikut.
 Selain tipe data primitif, Java juga memiliki tipe data **non-primitive** seperti **String, Character, Integer, dan lain sebagainya**. Tipe data non-primitif tersebut dapat ditandai dengan keyword **huruf awal** keyword berupa **kapital**.
 
 ## Variabel
-
-Merupakan sebuah **identifier untuk menyimpan nilai data** yang **dapat diubah nilai datanya**. Variabel memiliki tipe data dan identifier. Tipe data menandakan tipe nilai data yang dapat disimpan di variabel tersebut. Identifier variabel harus mengikuti aturan umum identifier. Deklarasi variabel dapat dilakukan dengan cara berikut ini.
+Merupakan sebuah **identifier untuk menyimpan nilai data** yang **dapat diubah nilai datanya**. Variabel memiliki tipe data dan identifier. Tipe data menandakan tipe nilai data yang dapat disimpan di variabel tersebut. Identifier variabel harus mengikuti aturan umum identifier. Deklarasi variabel dapat dilakukan dengan cara berikut ini.  
 
 ```java
 // tipe-data identifier [, identifier] [= nilai awal];
@@ -177,8 +160,7 @@ boolean cek, lulus = false;
 ```
 
 ### Case
-
-Perlu diperhatikan bahwa penulisan variabel dalam Java biasanya menggunakan Camel Case atau Pascal Case. Berikut adalah contoh dari berbagai case yang sering digunakan dalam semua bahasa pemrograman.
+Perlu diperhatikan bahwa penulisan variabel dalam Java biasanya menggunakan Camel Case atau Pascal Case. Berikut adalah contoh dari berbagai case yang sering digunakan dalam semua bahasa pemrograman.  
 
 ```java
 int nilaiAkhir, nilaiTugas, nilaiPraktikum // camel case
@@ -189,10 +171,8 @@ int NILAI_AKHIR, NILAI_TUGAS, NILAI_PRAKTIKUM // screaming snake case
 ```
 
 ## Konstanta dan Enum
-
 ### Konstanta
-
-Merupakan identifier untuk menyimpan nilai data yang **tidak dapat diubah nilai datanya**. Konstanta memiliki tipe data, identifier, dan nilai konstan. Tipe data menandakan tipe nilai data yang disimpan di konstanta tersebut. Identifier konstanta harus mengikuti aturan umum identifier. Deklarasi konstanta dapat dilihat melalui kode berikut.
+Merupakan identifier untuk menyimpan nilai data yang **tidak dapat diubah nilai datanya**. Konstanta memiliki tipe data, identifier, dan nilai konstan. Tipe data menandakan tipe nilai data yang disimpan di konstanta tersebut. Identifier konstanta harus mengikuti aturan umum identifier. Deklarasi konstanta dapat dilihat melalui kode berikut.  
 
 ```java
 // final tipe-data identifier = nilai [, identifier = nilai];
@@ -206,8 +186,7 @@ final double PI = 3.142;
 Konstanta dituliskan dengan **huruf kapital semua**, seperti screaming snake case.
 
 ### Enum
-
-Merupakan sebuah tipe data spesial yang memungkinkan suatu **variabel berisi konstanta yang sudah didefinisikan** sebelumnya. Enum biasanya digunakan untuk himpunan bernama. Contohnya adalah sebagai berikut
+Merupakan sebuah tipe data spesial yang memungkinkan suatu **variabel berisi konstanta yang sudah didefinisikan** sebelumnya. Enum biasanya digunakan untuk himpunan bernama. Contohnya adalah sebagai berikut  
 
 ```java
 /* lampu lalu lintas hanya bisa red, yellow, green
@@ -230,3 +209,5 @@ Arah arah = Arah.SELATAN;
 ```
 
 Enum juga dapat didefinisikan seperti layaknya kelas/class. Hal tersebut akan dibahas pada materi pemrograman lanjut/berorientasi objek dengan Java.
+
+[^1]: [List of Java keywords - Wikipedia](https://en.wikipedia.org/wiki/List_of_Java_keywords)
