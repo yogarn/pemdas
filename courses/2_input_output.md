@@ -20,7 +20,7 @@ Peralatan output standar adalah layar monitor. Simbol yang umum digunakan dalam 
 Nilai data yang akan ditampilkan sebagai keluaran dituliskan sebagai argumen dalam tanda kurung. Tanda plus (+) dapat digunakan untuk menghubungkan lebih dari satu nilai data yang akan ditampilkan, biasanya digunakan di String (Concatenation). Setiap penggunaan `println()` akan selalu diakhiri dengan baris baru pada tampilan keluarannya. Berikut ini adalah contoh penggunaan `System.out.println()`.
 ```java
 System.out.println("Hello There"); // Hello There
-System.out.println("Fuck " + "Off"); // Fuck Off
+System.out.println("Hi " + "There"); // Hi There
 System.out.println("10 + 5 = " + (10+5)); // 10 + 5 = 15
 
 // operasi aritmatika harus berada dalam tanda kurung
