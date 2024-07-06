@@ -37,17 +37,17 @@ run
 ## For
 Berbeda dengan sebelumnya, for bisa dibilang memiliki sintak yang lebih singkat dan rapi. For memiliki bagian inisialisasi variabel, kemudian diikuti dengan kondisi, dan di akhiri dengan pengubah variabel. For dapat diisi dengan berbagai instruksi yang berada di antara kurung kurawal pada for.
 
-Pada kode di bawah ini, for memiliki 3 bagian, yaitu `i = 0`, `i < 5`, dan `i++`. Maksudnya adalah, for akan mendeklarasikan variabel `i = 0`, kemudian akan memberikan kondisi `i < 5`. Apabila kondisi tersebut terpenuhi, maka program akan menjalankan instruksi, yaitu `System.out.println("Fuck there");`. Setelah itu, program akan menaikkan nilai `i` melalui `i++`. Apabila `i` yang telah dinaikkan nilainya masih memenuhi kondisi for, maka perulangan akan terus berlanjut hingga kondisi tidak terpenuhi.
+Pada kode di bawah ini, for memiliki 3 bagian, yaitu `i = 0`, `i < 5`, dan `i++`. Maksudnya adalah, for akan mendeklarasikan variabel `i = 0`, kemudian akan memberikan kondisi `i < 5`. Apabila kondisi tersebut terpenuhi, maka program akan menjalankan instruksi, yaitu `System.out.println("Hello there");`. Setelah itu, program akan menaikkan nilai `i` melalui `i++`. Apabila `i` yang telah dinaikkan nilainya masih memenuhi kondisi for, maka perulangan akan terus berlanjut hingga kondisi tidak terpenuhi.
 ```java
 for (int i = 0; i < 5; i++) {
-	System.out.println("Fuck there");
+	System.out.println("Hello there");
 }
 /*
-Fuck there
-Fuck there
-Fuck there
-Fuck there
-Fuck there
+Hello there
+Hello there
+Hello there
+Hello there
+Hello there
 */
 ```
 ## Break
