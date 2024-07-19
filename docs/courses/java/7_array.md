@@ -5,6 +5,7 @@ tags:
 Creation: 2023-11-03
 chapter: 7
 ---
+# Array
 ## Pengantar
 Array → Larik atau struktur berurut yang berisi elemen individu yang dapat di akses melalui rujukan bilangan dan digunakan untuk menyimpan tabel dan himpunan data yang berkaitan. Tipe data dalam array harus homogen.
 ```java

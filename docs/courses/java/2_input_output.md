@@ -5,7 +5,7 @@ tags:
 Creation: 2023-12-13
 chapter: 2
 ---
-
+# Input & Output
 ## Operasi Output
 Digunakan untuk **menampilkan nilai** data ke peralatan output membentuk data keluaran. Beberapa metode dari class `System` dalam bahasa pemrograman Java yang dapat digunakan untuk menampilkan keluaran pada peralatan output adalah sebagai berikut. **Metode** memiliki tanda kurung dengan nilai yang akan dimasukkan di dalamnya.
 ```java

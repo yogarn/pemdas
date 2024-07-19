@@ -4,7 +4,10 @@ const javaSidebar = [
   {
     text: `Let's Code!`,
     items: [
-      { text: `Struktur dan Tipe Data`, link: `${path}/1_struktur_tipe_data` },
+      {
+        text: `Struktur, Tipe Data, Konstanta, dan Variable Java`,
+        link: `${path}/1_struktur_tipe_data`,
+      },
       { text: `Input & Output`, link: `${path}/2_input_output` },
       {
         text: `Simple Process`,

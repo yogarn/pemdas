@@ -5,6 +5,7 @@ tags:
 Creation: 2023-11-10
 chapter: 6
 ---
+# Method
 ## Euclidean Distance
 Rumusnya adalah $\sqrt{x^2+y^2}$
 Method banyak digunakan dalam matematika, contohnya seperti $f(x) = 3x+1$, maka $f(2) = 5$ (fungsi).

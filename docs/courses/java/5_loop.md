@@ -4,6 +4,7 @@ tags:
 Creation: 2023-10-20
 chapter: 5
 ---
+# Perulangan
 ## While
 Merupakan perulangan yang terjadi apabila sebuah kondisi terpenuhi. Dalam kode di bawah ini, `x = 8` dan while memiliki kondisi `x < 10`. Variabel `x` tersebut tentunya memenuhi kondisi yang ada di dalam while, sehingga terjadi perulangan. 
 

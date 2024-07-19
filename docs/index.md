@@ -8,7 +8,7 @@ hero:
   tagline: Materi pemgoraman dasar Java Teknik Informatika.
   actions:
     - theme: brand
-      text: Start
+      text: Get Started
       link: /courses/java
     - theme: alt
       text: Github

@@ -5,7 +5,7 @@ tags:
 Creation: 2023-12-13
 chapter: 4
 ---
-
+# Percabangan
 Dalam sebuah algoritma, sering kali beberapa instruksi harus dilaksanakan bila suatu persyaratan dipenuhi (bernilai benar) dan sebaliknya.
 
 Dalam struktur percabangan bersyarat, suatu instruksi atau sekelompok instruksi dapat dilewati, sementara instruksi lain dijalankan. Pernyataan percabangan bersyarat terdiri dari:

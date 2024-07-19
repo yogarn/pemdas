@@ -5,7 +5,7 @@ tags:
 Creation: 2023-12-13
 chapter: 3
 ---
-
+# Simple Process
 Dikatakan proses sederhana (*simple*) karena dipandang sebagai **proses yang hanya mempunyai sebuah aliran masukan dan sebuah aliran keluaran**. Proses sederhana dalam pemrograman komputer terdiri atas : 
 - Pemanggilan metode atau procedure atau function
 - Perhitungan aritmetika atau logika
