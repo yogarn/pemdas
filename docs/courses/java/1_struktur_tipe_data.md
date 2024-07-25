@@ -7,6 +7,8 @@ chapter: 1
 ---
 
 # Struktur, Tipe Data, Konstanta, dan Variable Java
+Dalam bahasa pemrograman Java, terdapat struktur dan berbagai tipe data. Dalam artikel ini, kalian akan belajar mengenai struktur, jenis-jenis tipe data, penggunaan konstanta, dan variabel di Java.
+
 ## Struktur Program Bahasa Java
 
 ```java
@@ -54,6 +56,8 @@ Program Java ditulis menggunakan subset karakter Unicode, yaitu sebagai berikut.
   Unicode tidak hanya huruf latin, melainkan juga digunakan huruf-huruf bangsa lain, seperti Jepang, Korea, Jerman, dan bahkan Bengali. Memori yang digunakan adalah 2 byte (16 bit)
 
 ## Keyword dan Identifier
+Setiap bahasa pemrograman umumnya memiliki keywords (atau *reserved identifier*) yang tidak bisa kita gunakan sebagai identifier. Jadi, kita tidak bisa menggunakan keywords sebagai identifier dalam program kita. Supaya lebih paham apa maksudnya, coba perhatikan materi berikut ini.
+
 ### Keyword
 Merupakan **identifier khusus** dan **tidak diperbolehkan** digunakan **untuk identifier lain**. Berikut adalah daftar lengkap mengenai keywords yang ada di Java[^1].
 
