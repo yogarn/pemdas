@@ -148,7 +148,7 @@ Java memiliki 8 tipe **data primitif**, dengan rincian berikut.
 | char      | 16 bit | \u0000                    | \uFFFF                     |
 | boolean   |        | true or false             |
 
-Selain tipe data primitif, Java juga memiliki tipe data **non-primitive** seperti **String, Character, Integer, dan lain sebagainya**. Tipe data non-primitif tersebut dapat ditandai dengan keyword **huruf awal** keyword berupa **kapital**.
+Selain tipe data primitif, Java juga memiliki tipe data **non-primitive** seperti **String, Character, Integer, dan lain sebagainya**. Tipe data non-primitif tersebut dapat ditandai dengan keyword **huruf awal** keyword berupa **kapital**. Tipe data non-primitive tersebut akan dipelajari lebih lanjut pada pemrograman lanjut.
 
 ## Variabel
 Merupakan sebuah **identifier untuk menyimpan nilai data** yang **dapat diubah nilai datanya**. Variabel memiliki tipe data dan identifier. Tipe data menandakan tipe nilai data yang dapat disimpan di variabel tersebut. Identifier variabel harus mengikuti aturan umum identifier. Deklarasi variabel dapat dilakukan dengan cara berikut ini.  
@@ -175,6 +175,8 @@ int NILAI_AKHIR, NILAI_TUGAS, NILAI_PRAKTIKUM // screaming snake case
 ```
 
 ## Konstanta dan Enum
+Dalam pemrograman, konstanta berarti nilai yang tidak dapat diubah. Konstanta-konstanta itu bisa ditampung dalam sebuah tipe data khusus, yaitu enum.
+
 ### Konstanta
 Merupakan identifier untuk menyimpan nilai data yang **tidak dapat diubah nilai datanya**. Konstanta memiliki tipe data, identifier, dan nilai konstan. Tipe data menandakan tipe nilai data yang disimpan di konstanta tersebut. Identifier konstanta harus mengikuti aturan umum identifier. Deklarasi konstanta dapat dilihat melalui kode berikut.  
 
