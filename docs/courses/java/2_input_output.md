@@ -6,6 +6,8 @@ Creation: 2023-12-13
 chapter: 2
 ---
 # Input & Output
+Untuk bisa menerapkan pemrograman dalam kehidupan sehari-hari, tentunya kita memerlukan yang namanya input dan output. Input pada dasarnya adalah masukan, umumnya diberikan oleh user yang menjalankan program, sementara itu output adalah sesuatu yang ditampilkan oleh program. Pada bab sebelumnya, kita sudah menggunakan salah satu contoh output, yaitu `System.out.println()`. Di bab ini, kita bisa belajar bagaimana cara menampilkan berbagai output dengan format tertentu dan juga bagaimana cara menerima input dari user.
+
 ## Operasi Output
 Digunakan untuk **menampilkan nilai** data ke peralatan output membentuk data keluaran. Beberapa metode dari class `System` dalam bahasa pemrograman Java yang dapat digunakan untuk menampilkan keluaran pada peralatan output adalah sebagai berikut. **Metode** memiliki tanda kurung dengan nilai yang akan dimasukkan di dalamnya.
 ```java
