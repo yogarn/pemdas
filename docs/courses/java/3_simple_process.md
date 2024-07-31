@@ -7,7 +7,7 @@ chapter: 3
 ---
 # Simple Process
 Dikatakan proses sederhana (*simple*) karena dipandang sebagai **proses yang hanya mempunyai sebuah aliran masukan dan sebuah aliran keluaran**. Proses sederhana dalam pemrograman komputer terdiri atas : 
-- Pemanggilan metode atau procedure atau function
+- Pemanggilan method atau procedure atau function
 - Perhitungan aritmetika atau logika
 ## Ekspresi
 Ekspresi merupakan proses sederhana dalam pemrograman komputer untuk melakukan proses **perhitungan aritmetika dan logika**. Prinsip dasar perhitungan aritmetika dan logika dalam pemrograman komputer adalah melakukan perhitungan aritmetika atau logika, kemudian hasilnya disimpan dalam variabel tertentu. 
@@ -205,6 +205,7 @@ Sebaliknya, jika (a > b) bernilai salah, maka z = b
 */
 ```
 ### Bitwise
+Operasi bitwise sebenarny mirip dengan logika matematika sederhana, tetapi bitwise akan melakukan logika tersebut secara bit per bit. Untuk lebih jelasnya, bisa perhatikan contoh yang ada di bawah ini.
 
 | Simbol | Fungsi       | Contoh   |
 | ------ | ------------ | -------- |
@@ -252,7 +253,7 @@ Di-komplemenkan hasilnya 0011 1100 atau dalam notasi hexadecimal menjadi 3C
 */
 ```
 #### Shift
-Operator shift-right (>>n) dapat dipergunakan untuk menggeser n bit ke kanan dan diberi nilai 0 (nol) sejumlah n bit dari paling kiri yang ditinggalkan. Sementara itu, operator shift-left (<<n) dapat dipergunakan untuk menggeser n bit ke kiri dan diberi nilai 0 (nol) sejumlah n bit paling kanan yang ditinggalkan.
+Operator shift-right (`>>n`) dapat dipergunakan untuk menggeser n bit ke kanan dan diberi nilai 0 (nol) sejumlah n bit dari paling kiri yang ditinggalkan. Sementara itu, operator shift-left (<<n) dapat dipergunakan untuk menggeser n bit ke kiri dan diberi nilai 0 (nol) sejumlah n bit paling kanan yang ditinggalkan.
 ```java
 int A, B = 78;
 A = B >> 3; // nilai A = 9
@@ -265,14 +266,14 @@ Geser kekiri 2 bit : 100111000 = 312
 */
 ```
 ## Kelas Math
-Terdapat pada paket java.lang yang diperlukan untuk berbagai operasi matematika seperti sinus, cosinus, akar kuadrat, dan sebagainya. Kelas Math mempunyai 2 konstanta, yaitu PI dan E. Konstanta tersebut didefinisikan sebagai berikut.
+Terdapat pada paket `java.lang` yang diperlukan untuk berbagai operasi matematika seperti sinus, cosinus, akar kuadrat, dan sebagainya. Kelas Math mempunyai 2 konstanta, yaitu PI dan E. Konstanta tersebut didefinisikan sebagai berikut.
 ```java
 public static final double E = 2.71828182845904523354;
 public static final double PI = 3.14159265358979323846;
 ```
-Kelas Math mempunyai sejumlah metode sebagaimana dapat dilihat pada tabel berikut.
+Kelas Math mempunyai sejumlah method sebagaimana dapat dilihat pada tabel berikut.
 
-| Metode               | Keterangan                                                                                          |
+| Method               | Keterangan                                                                                          |
 | -------------------- | --------------------------------------------------------------------------------------------------- |
 | abs()                | Menghasilkan nilai absolut                                                                          |
 | acos()               | Menghasilkan nilai arc cosine                                                                       |
