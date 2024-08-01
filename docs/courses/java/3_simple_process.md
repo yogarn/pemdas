@@ -16,6 +16,7 @@ Komponen utama ekspresi adalah **operand dan operator**. Operand dapat berupa va
 ### Precedence dan Associativity
 Precedence menentukan urutan pengerjaan operator berdasarkan prioritas. Operator yang memiliki tingkat **precedence lebih tinggi** akan **dikerjakan lebih dahulu**. Associativity menentukan urutan pengerjaan operator berdasarkan lokasinya dalam sebuah ekspresi (dari kiri/kanan). Associativity berlaku untuk operator-operator yang memiliki precedence yang sama.
 ### Prioritas dan Urutan Pengerjaan
+Dalam operasi yang ada di pemrograman, terdapat urutan prioritas yang akan dikerjakan terlebih dahulu, sama hal nya seperti pada matematika pada umumnya. Berikut ini adalah urutan pengerjaan yang ada pada pemrograman.
 | Kategori                               | Simbol                  | Nama                          | Prioritas | Urutan Pengerjaan |
 | -------------------------------------- | ----------------------- | ----------------------------- | --------- | ----------------- |
 | Indeks larik, kurung, dan akses elemen | `[ ]`                   | Elemen array                  | 1         | Kiri-Kanan        |
@@ -89,7 +90,7 @@ int x = 7/2; // nilai x sama dengan 3
 float y = 3; // nilai y sama dengan 3.000
 ```
 ### Logika
-Digunakan untuk melakukan operasi logika
+Digunakan untuk melakukan operasi logika matematika.
 
 | Simbol | Fungsi |
 | ------ | ------ |
@@ -112,6 +113,7 @@ a = x && y; // error
 b = (x > y) && (y >= 0) // ok
 ```
 ### Aritmetika
+Digunakan untuk melakukan berbagai operasi aritmetika sederhana.
 | Simbol | Fungsi              | Contoh       |
 | ------ | ------------------- | ------------ |
 | `+`    | Penambahan          | `x = y + 6`  |
