@@ -5,14 +5,21 @@ tags:
 Creation: 2023-12-13
 chapter: 4
 ---
+
 # Percabangan
+
 Dalam sebuah algoritma, sering kali beberapa instruksi harus dilaksanakan bila suatu persyaratan dipenuhi (bernilai benar) dan sebaliknya.
 
 Dalam struktur percabangan bersyarat, suatu instruksi atau sekelompok instruksi dapat dilewati, sementara instruksi lain dijalankan. Pernyataan percabangan bersyarat terdiri dari:
+
 - **If**
 - **If Else**
 - **Switch Case**
+
 ## If dan If-else
+
+Jika **ekspresi** boolean bernilai **true**, maka **statement** atau **blok** statement akan **dilaksanakan**.
+
 ```java
 if (ekspresi boolean) statement;
 if (ekspresi boolean) {
@@ -20,7 +27,9 @@ if (ekspresi boolean) {
 	statement2;
 }
 ```
-Jika **ekspresi** boolean bernilai **true**, maka **statement** atau **blok** statement akan **dilaksanakan**.
+
+Jika ekspresi boolean true, maka `statement1` atau blok `statement1` yang dilaksanakan. Jika bernilai false, maka `statement2` atau blok `statement2` yang dilaksanakan.
+
 ```java
 if (ekspresi boolean) statement1;
 else statement2;
@@ -31,30 +40,38 @@ if (ekspresi boolean) {
 	statement2;
 }
 ```
-Jika ekspresi boolean true, maka `statement1` atau blok `statement1` yang dilaksanakan. Jika bernilai false, maka `statement2` atau blok `statement2` yang dilaksanakan.
+
 ## Nested If-else
-Konstruksi if-else dapat digunakan secara bertingkat.
+
+Penggunaan if-else juga dapat digunakan secara bertingkat (_nested_).
+
 ```java
-if (ekspresi boolean1) statement1; 
-else if (ekspresi boolean2) statement2; 
+if (ekspresi boolean1) statement1;
+else if (ekspresi boolean2) statement2;
 else if (ekspresi boolean3) statement3;
 .....
-..... 
+.....
 else if (ekspresi booleanN) statementN;
 ```
+
 ## Switch-case
-Pernyataan switch-case dapat dipergunakan sebagai pengganti pernyataan if-else jika pernyataan if-else bertingkat terlalu banyak, sehingga menjadi sulit dibaca.
+
+Pernyataan switch-case dapat dipergunakan sebagai pengganti pernyataan if-else jika pernyataan if-else bertingkat terlalu banyak, sehingga menjadi sulit dibaca. Namun, switch-case tidak dapat menerima ekspresi berupa logika layaknya pada if-else.
+
 ```java
 switch (ekspresi integer) {
-	case constant1: statements1; break; 
+	case constant1: statements1; break;
 	case constant2: statements2; break;
 	.....
 	.....
 	[ default: statements; ]
 }
 ```
+
 Pernyataan switch mengevaluasi ekspresi, kemudian melihat isi case constant. Jika nilai ekspresi ada di dalam constant list, maka pernyataan dieksekusi. Jika tidak ada yang cocok, pernyataan default yang dieksekusi.
 
-hanya byte, short, chart, dan int dengan [[Struktur, Tipe Data, Konstanta, dan Variable Java#Tipe Data|tipe data primitif]] yang dapat digunakan untuk switch.
+hanya byte, short, chart, dan int dengan tipe data primitif yang dapat digunakan untuk switch.
+
 ## Implementasi
-Dalam implementasinya, penggunaan if statement bisa dibilang lebih versatile jika dibandingkan dengan penggunaan switch case. Switch case hanya dapat menerima nilai konstan yang bersifat statis dan tetap, sementara if statement bisa menerima nilai berupa logika yang menggunakan berbagai macam [[Proses Sederhana#Relasional|operator relasional]].
+
+Dalam implementasinya, penggunaan if statement bisa dibilang lebih _versatile_ jika dibandingkan dengan penggunaan switch case. Switch case hanya dapat menerima nilai konstan yang bersifat statis dan tetap, sementara if statement bisa menerima nilai berupa logika yang menggunakan berbagai macam operasi.
