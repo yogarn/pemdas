@@ -19,11 +19,11 @@ public class HelloWorld {
 }
 ```
 
-`public class HelloWorld` pada kode di atas mengawali definisi kelas bernama `HelloWorld`. Kata kunci `public` disebut sebagai _access modifier_ dan kata kunci `class` untuk mendefinisikan kelas dari objek di Java, yang merupakan wadah logis program dari sekumpulan data dan metode. setelah kata kunci `class`, dituliskan nama kelas yang menggunakan aturan umum penulisan identifier. Konvensi nama kelas adalah kata benda dengan **huruf kapital di awal kata** yang berarti. **Nama file** harus **sama dengan nama class** public-nya. Komentar dapat ditulis sebagai penjelasan pada kode program. Program Java harus selalu diakhiri dengan ekstensi file `.java`.
+Baris pertama menandakan sebuah class. Setiap program di Java harus memiliki setidaknya satu class. Setiap class pasti memiliki nama (dalam kode tersebut, class bernama HelloWorld). Berdasarkan konvensi, nama class di Java harus diawali dengan huruf kapital. Baris kedua mendefinisikan `main` method. Setiap program pasti dieksekusi dari `main` method. Setiap program bisa punya banyak method. Anggap saja method seperti sebuah fungsi dan `main` method adalah fungsi yang pertama dijalankan oleh program. Setiap method mengandung statement. Di kode tersebut, statement nya adalah `System.out.println("Hello World");`. Statement tersebut akan menampilkan string `Hello World` ke console. String merupakan istilah di pemrograman bisa berarti pada rangkaian karakter atau kata-kata.
 
-`public static void main(String[] args)` merupakan **entry point** atau **jalan masuk** dari program. `public` berarti metode **dapat dipanggil dari mana pun**, `static` berarti sama **untuk semua instan kelas**, dan `void` berarti **tidak mengembalikan nilai**. `System.out.println()` berfungsi untuk **menampilkan output**.
+### Karakter Spesial
 
-Sementara itu, terdapat juga karakter-karakter spesial yang sering digunakan dalam program java.
+Di Java, terdapat karakter-karakter spesial yang sering digunakan dalam program. Di antaranya adalah berikut ini.
 
 | Character | Nama                 | Deskripsi                                   |
 | --------- | -------------------- | ------------------------------------------- |
@@ -36,7 +36,7 @@ Sementara itu, terdapat juga karakter-karakter spesial yang sering digunakan dal
 
 ### Komentar
 
-Komentar **tidak akan dieksekusi** dalam program dan tidak menambah ukuran dari bytecodes. Ada tiga macam komentar di Java, yaitu sebagai berikut.
+Komentar **tidak akan dieksekusi** dalam program dan tidak menambah ukuran dari *bytecodes*. Ada tiga macam komentar di Java, yaitu sebagai berikut.
 
 ```java
 /* semua karakter yang berada di antara tanda ini akan diabaikan */
@@ -46,7 +46,7 @@ Komentar **tidak akan dieksekusi** dalam program dan tidak menambah ukuran dari 
 
 ### Karakter
 
-Program Java ditulis menggunakan subset karakter Unicode, yaitu sebagai berikut.
+Program Java ditulis menggunakan subset karakter *Unicode*, yaitu sebagai berikut.
 
 - Huruf besar A-Z
 - Huruf kecil a-z
