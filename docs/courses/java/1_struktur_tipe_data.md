@@ -33,7 +33,8 @@ Kode di atas adalah contoh struktur utama kode Java yang pasti akan kalian temui
 
 **Semua kode yang berada di dalam** tanda kurung **main method akan dieksekusi** oleh Java. Hal tersebut karena main method berperan sebagai entry point atau sesuatu yang akan pertama kali dijalankan oleh Java. Kode yang ada di dalam main method, umumnya bisa berupa statement, misalnya dalam kode di atas adalah `System.out.println("Hello World");`. 
 
-> [!DANGER] Jangan lupa menambahkan tanda titik koma (;) pada akhir statement.
+::: danger Jangan lupa menambahkan tanda titik koma (semi colon, i.e., `;`) pada akhir statement.
+:::
 
 ### Karakter Spesial
 
@@ -67,7 +68,7 @@ Nah yang dimaksud bytecodes ini itu ukuran setelah program kita di compile. Codi
 
 ### Karakter
 
-Program Java (baik *syntax*, *identifier*, ataupun *literal*) ditulis menggunakan subset karakter *Unicode*[^1], yaitu sebagai berikut.
+Program Java (baik *syntax*, *identifier*, ataupun *literal*) ditulis menggunakan subset karakter *Unicode* [^1], yaitu sebagai berikut.
 
 - Huruf besar A-Z
 - Huruf kecil a-z
@@ -76,19 +77,28 @@ Program Java (baik *syntax*, *identifier*, ataupun *literal*) ditulis menggunaka
 - Kode kontrol (Seperti `formfeed` dan `newline`)
   Unicode tidak hanya huruf latin, melainkan juga digunakan huruf-huruf bangsa lain, seperti Jepang, Korea, Jerman, dan bahkan Bengali. Memori yang digunakan adalah 2 byte (16 bit)
 
-::: details Bisa ga sih, coding Java pake aksara jawa?
-Kode program **Java** itu **hanya bisa ditulis pakai karakter-karakter yang ada di atas**, tidak bisa pakai aksara jawa, aksara mandarin, aksara cyrillic, dan sebagainya.
+::: details Bisa ga sih, coding Java pakai Aksara Jawa?
+Kode program **Java** itu **hanya bisa ditulis pakai karakter-karakter yang ada di atas**, tidak bisa pakai Aksara Jawa, Aksara Mandarin, Aksara Cyrillic, atau yang lain.
 :::
 
 ## Keyword dan Identifier
-Setiap bahasa pemrograman umumnya memiliki keywords (atau *reserved identifier*) yang tidak bisa kita gunakan sebagai identifier. Jadi, kita tidak bisa menggunakan keywords sebagai identifier dalam program kita. Supaya lebih paham apa maksudnya, coba perhatikan materi berikut ini.
+Setiap bahasa pemrograman umumnya memiliki *keywords* (atau *reserved identifier*) yang tidak bisa kita gunakan sebagai identifier. Jadi, kita tidak bisa menggunakan keywords sebagai nama class, nama method, atau bahkan nama variabel dalam program kita. Supaya lebih paham apa maksudnya, coba perhatikan materi berikut ini.
 
 ### Keyword
-Merupakan **identifier khusus** dan **tidak diperbolehkan** digunakan **untuk identifier lain**. Berikut adalah daftar lengkap mengenai keywords yang ada di Java[21].
+> Merupakan **identifier khusus** dan **tidak diperbolehkan** digunakan **untuk identifier lain**. 
+
+Contohnya itu bisa kita lihat pada tipe data dan berbagai *syntax* umum (e.g., `public`, `static`, `class`, etc) Java. Berikut adalah daftar lengkap mengenai keywords yang ada di Java [^2].
 
 ### Identifier
-Merupakan **nama berbagai elemen program**, seperti nama variabel, metode, kelas, keyword, dan sebagainya.  
-**Karakter pertama** harus **berupa huruf** atau `_` atau `$`. Namun dianjurkan untuk tidak menggunakan `_` dan `$`. **Karakter kedua dan seterusnya** dapat berupa **huruf atau angka**. Huruf besar dianggap berbeda dengan huruf kecil (case sensitive). **Tidak ada batas** panjang, tetapi **tidak boleh menggunakan keyword**. Contoh identifier yang benar adalah `nama`, `x1`, `total`, `cubic`, `namaPegawai` dan yang salah adalah `1kali`, `int`.
+> Merupakan **nama berbagai elemen program**, e.g., nama variabel, *method*, *class*, *keyword*, etc. 
+
+**Karakter pertama** harus **berupa huruf** atau `_` atau `$`. Namun dianjurkan untuk tidak menggunakan `_` dan `$`. **Karakter kedua dan seterusnya** dapat berupa **huruf atau angka**. Huruf besar dianggap berbeda dengan huruf kecil (*case sensitive*). **Tidak ada batas** panjang, tetapi **tidak boleh menggunakan keyword**. 
+
+::: tip `nama`, `x1`, `total`, `cubic`, `namaPegawai`, `_hello` adalah contoh identifier yang *valid* dan benar.
+:::
+
+::: danger `1kali`, `int`, `public` adalah contoh identifier yang *invalid* dan salah.
+:::
 
 ## Literal
 Merupakan **nilai data** yang dituliskan pada kode sumber/program. Ada lima macam literal di Java, yaitu Integer, Floating Point, Boolean, Character, dan String.
