@@ -8,7 +8,7 @@ chapter: 1
 
 # Struktur, Tipe Data, Konstanta, dan Variable Java
 
-> bagaimana sih, caranya membuat program java?
+> Gimana sih, caranya membuat program java?
 
 Dalam bahasa pemrograman Java, terdapat struktur dan berbagai tipe data. Dalam artikel ini, kalian akan belajar mengenai struktur, jenis-jenis tipe data, penggunaan konstanta, dan variabel di Java.
 
@@ -19,8 +19,8 @@ Dalam bahasa pemrograman Java, terdapat struktur dan berbagai tipe data. Dalam a
 public class Main {
   // main method
 	public static void main(String[] args) {
-    // statement
-		System.out.println("Hello World");
+		System.out.println("Hello World"); // statement
+    System.out.println("Halo Dunia"); // statement lain
 	}
 }
 ```
@@ -31,24 +31,26 @@ Kode di atas adalah contoh struktur utama kode Java yang pasti akan kalian temui
 
 `public static void` kita pakai untuk mendefinisikan sebuah method. Kemudian, kita bisa menambahkan nama (*identifier*) untuk dipakai sebagai nama method yang kita buat. Oleh karena itu, `public static void main(String[] args)` kita sebut sebagai main method, karena identifiernya adalah `main`. Tanda kurung yang ada setelah identifier atau nama method kita sebut sebagai **parameter** (akan dipelajari lebih lanjut di bab selanjutnya). Setelah membuat main method, jangan lupa tambahkan kurung kurawal juga seperti ketika membuat class.  
 
-**Semua kode yang berada di dalam** tanda kurung **main method akan dieksekusi** oleh Java. Hal tersebut karena main method berperan sebagai entry point atau sesuatu yang akan pertama kali dijalankan oleh Java. Kode yang ada di dalam main method, umumnya bisa berupa statement, misalnya dalam kode di atas adalah `System.out.println("Hello World");`. **Jangan lupa menambahkan tanda titik koma** (semi colon, i.e., `;`) pada akhir statement.
+**Semua kode yang berada di dalam** tanda kurung **main method akan dieksekusi** oleh Java. Hal tersebut karena main method berperan sebagai entry point atau sesuatu yang akan pertama kali dijalankan oleh Java. Kode yang ada di dalam main method, umumnya bisa berupa statement, misalnya dalam kode di atas adalah `System.out.println("Hello World");`. 
+
+> [!DANGER] Jangan lupa menambahkan tanda titik koma (;) pada akhir statement.
 
 ### Karakter Spesial
 
-Di Java, terdapat karakter-karakter spesial yang sering digunakan dalam program. Di antaranya adalah berikut ini.
+Di Java, terdapat **karakter-karakter spesial** yang cukup sering digunakan dalam program. Misalnya saja kurung kurawal atau *curly braces* yang sebelumnya kita pakai untuk mendefinisikan sebuah class dan method, lalu tanda kurung yang kita pakai sebagai parameter dalam *main method*, dan sebagainya. Untuk lebih lengkapnya bisa lihat pada tabel berikut ini.
 
-| Character | Nama                 | Deskripsi                                   |
-| --------- | -------------------- | ------------------------------------------- |
-| `{}`      | Tanda Kurung Kurawal | Menandai blok untuk statement               |
-| `()`      | Tanda Kurung         | Digunakan dalam methods                     |
-| `[]`      | Tanda Kurung Siku    | Menandai array                              |
-| `//`      | Double Slash         | Digunakan untuk komentar                    |
-| `""`      | Tanda Petik Ganda    | Menandai sebuah string                      |
-| `;`       | Titik Koma           | Digunakan untuk mengakhiri sebuah statement |
+| Character | Nama                 | Deskripsi                                      |
+| --------- | -------------------- | ---------------------------------------------- |
+| `{}`      | Tanda Kurung Kurawal | Digunakan sebagai penanda blok untuk statement |
+| `()`      | Tanda Kurung         | Digunakan dalam methods sebagai parameter      |
+| `[]`      | Tanda Kurung Siku    | Digunakan untuk array                          |
+| `//`      | Double Slash         | Digunakan untuk komentar                       |
+| `""`      | Tanda Petik Ganda    | Menandai sebuah string                         |
+| `;`       | Titik Koma           | Digunakan untuk mengakhiri sebuah statement    |
 
 ### Komentar
 
-Komentar **tidak akan dieksekusi** dalam program dan tidak menambah ukuran dari *bytecodes*. Ada tiga macam komentar di Java, yaitu sebagai berikut.
+Komentar **tidak akan dieksekusi** dalam program dan **tidak menambah ukuran** dari *bytecodes*. Ada tiga macam komentar di Java, yaitu sebagai berikut.
 
 ```java
 /* semua karakter yang berada di antara tanda ini akan diabaikan */
@@ -56,9 +58,16 @@ Komentar **tidak akan dieksekusi** dalam program dan tidak menambah ukuran dari 
 /** semua karakter yang berada di dalam tanda ini akan diabaikan dan membuat dokumentasi otomatis dengan tool javadoc */
 ```
 
+**Tujuan utama komentar adalah untuk dibaca sesama manusia**, bisa untuk tujuan dokumentasi atau sekedar memberi tahu flow dari program yang kita buat.
+
+::: details Kok bisa sih, komentar tidak menambah ukuran dari bytecodes? Padahal kan ketika kita membuat komentar, kita menambahkan karakter baru ke file java kita? 
+
+Nah yang dimaksud bytecodes ini itu ukuran setelah program kita di compile. Codingan Java yang kita ketik itu akan di compile terlebih dahulu oleh Java Compiler. Java compiler ini akan *ignore* atau *skip* komentar-komentar yang kita buat, sehingga tidak memengaruhi ukuran program setelah di compile. 
+:::
+
 ### Karakter
 
-Program Java ditulis menggunakan subset karakter *Unicode*, yaitu sebagai berikut.
+Program Java (baik *syntax*, *identifier*, ataupun *literal*) ditulis menggunakan subset karakter *Unicode*[^1], yaitu sebagai berikut.
 
 - Huruf besar A-Z
 - Huruf kecil a-z
@@ -67,11 +76,15 @@ Program Java ditulis menggunakan subset karakter *Unicode*, yaitu sebagai beriku
 - Kode kontrol (Seperti `formfeed` dan `newline`)
   Unicode tidak hanya huruf latin, melainkan juga digunakan huruf-huruf bangsa lain, seperti Jepang, Korea, Jerman, dan bahkan Bengali. Memori yang digunakan adalah 2 byte (16 bit)
 
+::: details Bisa ga sih, coding Java pake aksara jawa?
+Kode program **Java** itu **hanya bisa ditulis pakai karakter-karakter yang ada di atas**, tidak bisa pakai aksara jawa, aksara mandarin, aksara cyrillic, dan sebagainya.
+:::
+
 ## Keyword dan Identifier
 Setiap bahasa pemrograman umumnya memiliki keywords (atau *reserved identifier*) yang tidak bisa kita gunakan sebagai identifier. Jadi, kita tidak bisa menggunakan keywords sebagai identifier dalam program kita. Supaya lebih paham apa maksudnya, coba perhatikan materi berikut ini.
 
 ### Keyword
-Merupakan **identifier khusus** dan **tidak diperbolehkan** digunakan **untuk identifier lain**. Berikut adalah daftar lengkap mengenai keywords yang ada di Java[^1].
+Merupakan **identifier khusus** dan **tidak diperbolehkan** digunakan **untuk identifier lain**. Berikut adalah daftar lengkap mengenai keywords yang ada di Java[21].
 
 ### Identifier
 Merupakan **nama berbagai elemen program**, seperti nama variabel, metode, kelas, keyword, dan sebagainya.  
@@ -228,4 +241,5 @@ Arah arah = Arah.SELATAN;
 
 Enum juga dapat didefinisikan seperti layaknya kelas/class. Hal tersebut akan dibahas pada materi pemrograman lanjut/berorientasi objek dengan Java.
 
-[^1]: [List of Java keywords - Wikipedia](https://en.wikipedia.org/wiki/List_of_Java_keywords)
+[^1]: [What is Unicode?](https://www.geeksforgeeks.org/what-is-unicode/)
+[^2]: [List of Java keywords - Wikipedia](https://en.wikipedia.org/wiki/List_of_Java_keywords)
