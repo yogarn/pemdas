@@ -101,10 +101,12 @@ Contohnya itu bisa kita lihat pada tipe data dan berbagai *syntax* umum (e.g., `
 :::
 
 ## Literal
-Merupakan **nilai data** yang dituliskan pada kode sumber/program. Ada lima macam literal di Java, yaitu Integer, Floating Point, Boolean, Character, dan String.
+> Apa aja sih, nilai data yang bisa disimpan di Java?
+
+Literal pada dasarnya itu merupakan **nilai data** yang kita tuliskan pada program kita, bisa berupa angka, teks, atau yang lainnya. Secara teknis, kita bisa bagi jadi lima macam, yaitu **Integer**, **Floating Point**, **Boolean**, **Character**, dan **String**.
 
 ### Integer
-Literal integer atau bilangan bulat dapat direpresentasikan dalam **bentuk desimal** (10), **oktal** (8), dan **heksadesimal** (16). Hanya bentuk desimal yang boleh diberi tanda positif (+) dan negatif (-). Bentuk oktal ditandai dengan angka `0` di awal. Sedangkan bentuk heksadesimal diawali dengan `0x` atau `0X`. Berikut adalah contoh dari literal integer.  
+Literal integer atau bilangan bulat dapat direpresentasikan dalam **bentuk desimal** (10), **oktal** (8), dan **heksadesimal** (16). Hanya bentuk desimal yang boleh diberi tanda positif (+) dan negatif (-). Bentuk oktal ditandai dengan angka `0` di awal. Sedangkan bentuk heksadesimal diawali dengan `0x` atau `0X`.  
 
 ```java
 175 // bilangan desimal 175 (10)
@@ -115,7 +117,9 @@ Literal integer atau bilangan bulat dapat direpresentasikan dalam **bentuk desim
 ```
 
 ### Floating Point
-Merupakan **representasi dari bilangan desimal** yang **mempunyai titik desimal** (bagian pecahan), misalnya `7.4567`. Literal floating point **boleh bertanda positif (+), negatif (-), maupun tidak bertanda**. Misalnya `+7.4567, -7.4567, 7.4567`. Penulisan literal floating point dapat menggunakan notasi standar maupun ilmiah/scientific. Default floating point bertipe `double` (64 bit). Bila diinginkan bertipe `float` (32 bit), maka harus ditambahkan simbol huruf `f` atau `F` di akhir bilangan. Misalnya `7.4567f` atau `7.4567F`. Berikut adalah contoh dari literal floating point.  
+Merupakan **representasi dari bilangan desimal** yang **mempunyai titik desimal** (bagian pecahan), misalnya `7.4567`. Literal floating point **boleh bertanda positif (+), negatif (-), maupun tidak bertanda**. Misalnya `+7.4567, -7.4567, 7.4567`. Penulisan literal floating point dapat menggunakan notasi standar maupun ilmiah/*scientific*.  
+
+Secara default, floating point itu bertipe `double` (64 bit). Kalau ingin dijadikan menjadi `float` (32 bit), maka kita harus menambahkan simbol huruf `f` atau `F` di akhir bilangan. Misalnya `7.4567f` atau `7.4567F`.   
 
 ```java
 0.75 // 0,75 atau 75/100
@@ -128,7 +132,7 @@ Merupakan **representasi dari bilangan desimal** yang **mempunyai titik desimal*
 ```
 
 ### Karakter
-Literal karakter direpresentasikan sebagai **karakter Unicode tunggal** dan dituliskan dengan diapit **tanda petik tunggal**. Contohnya adalah sebagai berikut.  
+Literal karakter direpresentasikan sebagai **karakter Unicode tunggal** dan dituliskan dengan diapit **tanda petik tunggal** (*single quote*, i.e., `'`). Contohnya adalah sebagai berikut.  
 
 ```java
 'A' // karakter huruf A kapital
@@ -137,8 +141,17 @@ Literal karakter direpresentasikan sebagai **karakter Unicode tunggal** dan ditu
 '#' // karakter simbol hashtag
 ```
 
+### String
+Literal String pada dasarnya merupakan kumpulan dari karakter. String **bisa berisi karakter khusus** seperti `newline`, `tab`, dan sebagainya. String dituliskan dengan diapit tanda petik ganda (*double quote*, i.e., `"`). Berikut adalah contoh dari literal string.  
+
+```java
+"Bahasa\nKomputer" // Memberi newline antara bahasa dan komputer
+"Nama\t:\tHerman" // antara "Nama" dengan ":" dan ":" dengan "Herman" terdapat horisontal tab
+"Teks\"Hallo\"" // kata Hallo diapit oleh tanda petik ganda
+```
+
 ### Escape Sequences
-Berikut adalah beberapa escape sequences yang digunakan di Java.  
+Escape sequence biasanya dipakai dalam String.
 
 ```java
 \b // backspace
@@ -152,21 +165,27 @@ Berikut adalah beberapa escape sequences yang digunakan di Java.
 \ddd // notasi octal
 ```
 
+Biar ga bingung, coba perhatikan cuplikan statement Java berikut ini.
+
+```java
+System.out.println("Hello World\nHalo Dunia");
+```
+
+Kode di atas akan memberikan output sebagai berikut, perhatikan escape sequences `\n` yang akan memberikan *new line* alias baris baru.
+
+```
+Hello World
+Halo Dunia
+```
+
+Untuk contoh-contoh lain bisa dilihat di referensi berikut [^3].
+
 ### Boolean
-Literal boolean dipergunakan untuk menuliskan nilai data boolean yang berisi **true** atau **false**. Penulisannya adalah sebagai berikut.  
+Literal boolean dipakai untuk menuliskan nilai yang berisi **true** atau **false** alias benar atau salah. Penulisannya adalah sebagai berikut.  
 
 ```java
 true // benar
 false // salah
-```
-
-### String
-Literal String **bisa berisi karakter khusus** seperti `newline`, `tab`, dan sebagainya. Berikut adalah contoh dari literal string.  
-
-```java
-"Bahasa\nKomputer" // Memberi newline antara bahasa dan komputer
-"Nama\t:\tHerman" // antara "Nama" dengan ":" dan ":" dengan "Herman" terdapat horisontal tab
-"Teks\"Hallo\"" // kata Hallo diapit oleh tanda petik ganda
 ```
 
 ## Tipe Data
@@ -251,5 +270,6 @@ Arah arah = Arah.SELATAN;
 
 Enum juga dapat didefinisikan seperti layaknya kelas/class. Hal tersebut akan dibahas pada materi pemrograman lanjut/berorientasi objek dengan Java.
 
-[^1]: [What is Unicode?](https://www.geeksforgeeks.org/what-is-unicode/)
+[^1]: [What is Unicode? - GeeksforGeeks](https://www.geeksforgeeks.org/what-is-unicode/)
 [^2]: [List of Java keywords - Wikipedia](https://en.wikipedia.org/wiki/List_of_Java_keywords)
+[^3]: [Java Escape Sequences - GeeksforGeeks](https://www.geeksforgeeks.org/escape-sequences-in-java/)
