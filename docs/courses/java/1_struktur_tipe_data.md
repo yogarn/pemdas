@@ -20,7 +20,7 @@ public class Main {
   // main method
 	public static void main(String[] args) {
 		System.out.println("Hello World"); // statement
-    System.out.println("Halo Dunia"); // statement lain
+    		System.out.println("Halo Dunia"); // statement lain
 	}
 }
 ```
