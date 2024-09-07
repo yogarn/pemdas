@@ -189,7 +189,9 @@ false // salah
 ```
 
 ## Tipe Data
-Java memiliki 8 tipe **data primitif**, dengan rincian berikut.  
+> Tipe data pada dasarnya adalah jenis data yang tersimpan pada sebuah variabel.
+
+Ketika kita membuat sebuah variabel di Java, kita perlu menentukan literal/data apa yang akan kita simpan pada variabel tersebut. Jenis literal yang akan kita simpan pada variabel akan memengaruhi tipe data yang akan kita gunakan. Java memiliki 8 tipe **data primitif**, dengan rincian berikut (***range inclusive***).  
 
 | Tipe Data | Memori | Nilai Minimum             | Nilai Maksimum             |
 | --------- | ------ | ------------------------- | -------------------------- |
@@ -200,10 +202,21 @@ Java memiliki 8 tipe **data primitif**, dengan rincian berikut.
 | float     | 32 bit | ±1.40239846E-45           | ±3.40282347E+38            |
 | double    | 64 bit | ±4.94065645841246544E-324 | ±1.7976931348623157 0E+308 |
 | char      | 16 bit | \u0000                    | \uFFFF                     |
-| boolean   |        | true or false             |
+| boolean   | 1 bit  | 0 (false)                 | 1 (true)                   |
 
-Selain tipe data primitif, Java juga memiliki tipe data **non-primitive** seperti **String, Character, Integer, dan lain sebagainya**. Tipe data non-primitif tersebut dapat ditandai dengan keyword **huruf awal** keyword berupa **kapital**. Tipe data non-primitive tersebut akan dipelajari lebih lanjut pada pemrograman lanjut.
+Bisa dibilang, tipe data primitif di atas merupakan tipe data yang kita gunakan untuk literal *numeric*, i.e., integer, floating point, karakter, dan boolean. Tipe data `byte`, `short`, `int`, dan `long` bisa kita pakai untuk menyimpan literal ***integer***. Kemudian, `float` dan `double` bisa kita pakai untuk menyimpan literal ***floating point***. Tipe data `char` bisa kita pakai untuk menyimpan literal **karakter**. Kemudian, `boolean` bisa kita gunakan untuk menyimpan literal ***boolean***.
 
+Selain tipe data primitif, Java juga memiliki tipe data **non-primitive** seperti **String** (dipakai untuk menyimpan literal ***String***), **Character, Integer, dan lain sebagainya**. Tipe data non-primitif tersebut dapat ditandai dengan keyword **huruf awal** keyword berupa **kapital**. Tipe data non-primitive tersebut akan dipelajari lebih lanjut pada pemrograman lanjut.
+
+:::details Jika tipe data `byte`, `short`, `int`, dan `long` bisa kita pakai untuk menyimpan semua literal ***integer***, kenapa kita tidak menggunakan `long` untuk semua tipe data integer kita? Bukankah `long` memiliki *range* paling luas?
+
+Boleh saja menggunakan `long` untuk setiap data integer, dan memang benar `long` memiliki range paling panjang. Namun, dengan demikian, `long` juga menggunakan memori paling besar (alias paling boros). 
+
+Mungkin jika program tidak terlalu kompleks, itu belum jadi masalah. Namun, jika program sudah cukup kompleks, penurunan performa jelas akan terasa. Hal yang sama juga berlaku pada `float` dan `double`.
+:::
+
+::: tip Gunakan tipe data **yang paling sesuai** dengan nilai literal yang akan kalian simpan.
+:::
 ## Variabel
 Merupakan sebuah **identifier untuk menyimpan nilai data** yang **dapat diubah nilai datanya**. Variabel memiliki tipe data dan identifier. Tipe data menandakan tipe nilai data yang dapat disimpan di variabel tersebut. Identifier variabel harus mengikuti aturan umum identifier. Deklarasi variabel dapat dilakukan dengan cara berikut ini.  
 
