@@ -7,19 +7,31 @@ chapter: 1
 ---
 
 # Struktur, Tipe Data, Konstanta, dan Variable Java
+
+> bagaimana sih, caranya membuat program java?
+
 Dalam bahasa pemrograman Java, terdapat struktur dan berbagai tipe data. Dalam artikel ini, kalian akan belajar mengenai struktur, jenis-jenis tipe data, penggunaan konstanta, dan variabel di Java.
 
-## Struktur Program Bahasa Java
+## Struktur Program Java
 
 ```java
-public class HelloWorld {
+// main class
+public class Main {
+  // main method
 	public static void main(String[] args) {
+    // statement
 		System.out.println("Hello World");
 	}
 }
 ```
 
-Baris pertama menandakan sebuah class. Setiap program di Java harus memiliki setidaknya satu class. Setiap class pasti memiliki nama (dalam kode tersebut, class bernama HelloWorld). Berdasarkan konvensi, nama class di Java harus diawali dengan huruf kapital. Baris kedua mendefinisikan `main` method. Setiap program pasti dieksekusi dari `main` method. Setiap program bisa punya banyak method. Anggap saja method seperti sebuah fungsi dan `main` method adalah fungsi yang pertama dijalankan oleh program. Setiap method mengandung statement. Di kode tersebut, statement nya adalah `System.out.println("Hello World");`. Statement tersebut akan menampilkan string `Hello World` ke console. String merupakan istilah di pemrograman bisa berarti pada rangkaian karakter atau kata-kata.
+Kode di atas adalah contoh struktur utama kode Java yang pasti akan kalian temui di banyak kode-kode Java lain. Struktur tersebut terdiri atas *main class*, *main method*, dan juga *statement*.  
+
+`public class` kita pakai ketika kita ingin mendeklarasikan (atau membuat) sebuah class. Setelah itu, kita bisa menambahkan nama (*identifier*) dari class yang ingin kita buat. Dalam kode di atas, `Main` adalah nama class yang kita buat. Nama class tidak harus `Main`, bisa apa saja, tetapi harus mengikuti peraturan mengenai *identifier* (akan di bahas lebih lanjut di bawah). **Nama class** juga **harus sama dengan nama file** yang dibuat, i.e., file dengan nama `HelloWorld.java` juga harus punya main class dengan nama `HelloWorld`. Setelah membuat main class, kita bisa membuat simbol kurung kurawal (*curly braces*, i.e., `{` dan `}`) sebagai penanda bahwa semua yang ada di antara tanda kurung tersebut merupakan bagian dari main class.
+
+`public static void` kita pakai untuk mendefinisikan sebuah method. Kemudian, kita bisa menambahkan nama (*identifier*) untuk dipakai sebagai nama method yang kita buat. Oleh karena itu, `public static void main(String[] args)` kita sebut sebagai main method, karena identifiernya adalah `main`. Tanda kurung yang ada setelah identifier atau nama method kita sebut sebagai **parameter** (akan dipelajari lebih lanjut di bab selanjutnya). Setelah membuat main method, jangan lupa tambahkan kurung kurawal juga seperti ketika membuat class.  
+
+**Semua kode yang berada di dalam** tanda kurung **main method akan dieksekusi** oleh Java. Hal tersebut karena main method berperan sebagai entry point atau sesuatu yang akan pertama kali dijalankan oleh Java. Kode yang ada di dalam main method, umumnya bisa berupa statement, misalnya dalam kode di atas adalah `System.out.println("Hello World");`. **Jangan lupa menambahkan tanda titik koma** (semi colon, i.e., `;`) pada akhir statement.
 
 ### Karakter Spesial
 
