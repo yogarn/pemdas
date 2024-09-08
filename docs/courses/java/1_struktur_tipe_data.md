@@ -20,7 +20,7 @@ public class Main {
   // main method
 	public static void main(String[] args) {
 		System.out.println("Hello World"); // statement
-    		System.out.println("Halo Dunia"); // statement lain
+    System.out.println("Halo Dunia"); // statement lain
 	}
 }
 ```
@@ -241,11 +241,8 @@ int nilai-akhir, nilai-tugas, nilai-praktikum // kebab case
 int NILAI_AKHIR, NILAI_TUGAS, NILAI_PRAKTIKUM // screaming snake case
 ```
 
-## Konstanta dan Enum
-Dalam pemrograman, konstanta berarti nilai yang tidak dapat diubah. Konstanta-konstanta itu bisa ditampung dalam sebuah tipe data khusus, yaitu enum.
-
-### Konstanta
-Merupakan identifier untuk menyimpan nilai data yang **tidak dapat diubah nilai datanya**. Konstanta memiliki tipe data, identifier, dan nilai konstan. Tipe data menandakan tipe nilai data yang disimpan di konstanta tersebut. Identifier konstanta harus mengikuti aturan umum identifier. Deklarasi konstanta dapat dilihat melalui kode berikut.  
+## Konstanta
+Merupakan tempat untuk menyimpan nilai data yang **tidak dapat diubah nilai datanya**. Konstanta memiliki tipe data, identifier, dan nilai konstan. Tipe data menandakan tipe nilai data yang disimpan di konstanta tersebut. Identifier konstanta harus mengikuti aturan umum identifier. Deklarasi konstanta dapat dilihat melalui kode berikut.  
 
 ```java
 // final tipe-data identifier = nilai [, identifier = nilai];
@@ -256,9 +253,15 @@ final double MIN = 0.0, MAKS = 1000000.0;
 final double PI = 3.142;
 ```
 
-Konstanta dituliskan dengan **huruf kapital semua**, seperti screaming snake case.
+Pembuatan konstanta mirip dengan variabel biasa, hanya saja perlu ditambah keyword `final` di awal. Konstanta dituliskan dengan **huruf kapital semua**, seperti screaming snake case.
 
-### Enum
+:::details Kenapa pakai konstanta ketika kita bisa pakai variabel biasa?
+Konstanta kita pakai untuk nilai yang tidak akan berubah selamanya, berbeda dengan variabel yang bisa berganti-ganti value. Hal tersebut bisa membuat program kita lebih cepat, karena compiler bisa menggunakan pendekatan yang paling optimal dibandingkan variabel yang bisa berubah (konstanta tidak memerlukan space)[^4].  
+
+Kalau gitu kenapa ga pakai literal langsung? biar kode yang kalian buat lebih mudah digunakan kembali (reuseable) dan lebih mudah dibaca orang (readable).
+:::
+
+## Enum
 Merupakan sebuah tipe data spesial yang memungkinkan suatu **variabel berisi konstanta yang sudah didefinisikan** sebelumnya. Enum biasanya digunakan untuk himpunan bernama. Contohnya adalah sebagai berikut  
 
 ```java
@@ -281,8 +284,12 @@ Hari hari = Hari.MINGGU;
 Arah arah = Arah.SELATAN;
 ```
 
+:::tip Singkatnya, enum digunakan untuk menampung kumpulan konstanta.
+:::
+
 Enum juga dapat didefinisikan seperti layaknya kelas/class. Hal tersebut akan dibahas pada materi pemrograman lanjut/berorientasi objek dengan Java.
 
 [^1]: [What is Unicode? - GeeksforGeeks](https://www.geeksforgeeks.org/what-is-unicode/)
 [^2]: [List of Java keywords - Wikipedia](https://en.wikipedia.org/wiki/List_of_Java_keywords)
 [^3]: [Java Escape Sequences - GeeksforGeeks](https://www.geeksforgeeks.org/escape-sequences-in-java/)
+[^4]: [Why Are Constant Used? - StackOverflow](https://stackoverflow.com/questions/35233909/why-are-constants-used-instead-of-variables)
