@@ -9,17 +9,24 @@ chapter: 2
 Untuk bisa menerapkan pemrograman dalam kehidupan sehari-hari, tentunya kita memerlukan yang namanya input dan output. Input pada dasarnya adalah masukan, umumnya diberikan oleh user yang menjalankan program, sementara itu output adalah sesuatu yang ditampilkan oleh program. Pada bab sebelumnya, kita sudah menggunakan salah satu contoh output, yaitu `System.out.println()`. Di bab ini, kita bisa belajar bagaimana cara menampilkan berbagai output dengan format tertentu dan juga bagaimana cara menerima input dari user.
 
 ## Operasi Output
-Digunakan untuk **menampilkan nilai** data ke peralatan output membentuk data keluaran. Beberapa metode dari class `System` dalam bahasa pemrograman Java yang dapat digunakan untuk menampilkan keluaran pada peralatan output adalah sebagai berikut. **Metode** memiliki tanda kurung dengan nilai yang akan dimasukkan di dalamnya.
+Digunakan untuk **menampilkan nilai** data ke console/terminal. Beberapa method dari class `System` di Java yang dapat digunakan untuk menampilkan keluaran pada console/terminal adalah sebagai berikut.
 ```java
 System.out.println();
 System.out.print();
 System.out.printf();
 ```
-Peralatan output standar adalah layar monitor. Simbol yang umum digunakan dalam flowchart untuk output adalah berbentuk jajar genjang.
-### System.out.println()
-`System.out` merupakan suatu **objek** yang merupakan bagian dari bahasa pemrograman Java itu sendiri. `println()` merupakan metode yang dipanggil oleh objek `System.out` dan dapat digunakan untuk **menampilkan output** pada console yang ada di layar monitor sebagai peralatan keluaran standar.
 
-Nilai data yang akan ditampilkan sebagai keluaran dituliskan sebagai argumen dalam tanda kurung. Tanda plus (+) dapat digunakan untuk menghubungkan lebih dari satu nilai data yang akan ditampilkan, biasanya digunakan di String (Concatenation). Setiap penggunaan `println()` akan selalu diakhiri dengan baris baru pada tampilan keluarannya. Berikut ini adalah contoh penggunaan `System.out.println()`.
+Data atau nilai yang ingin kita tampilkan, bisa kita masukkan sebagai argumen pada method-method di atas.
+
+:::tip Simbol yang umum digunakan untuk menampilkan output dalam flowchart untuk output adalah berbentuk jajar genjang.
+:::
+### System.out.println()
+`System.out` merupakan suatu **objek** yang merupakan bagian dari bahasa pemrograman Java itu sendiri. `println()` merupakan *method* yang dipanggil oleh objek `System.out` dan dapat digunakan untuk **menampilkan output** pada console yang ada di layar monitor sebagai standard output.
+
+:::tip Intinya, `System.out.println()` bisa kita pakai untuk nampilin data ke terminal/console.
+:::
+
+Nilai data yang akan ditampilkan sebagai keluaran dituliskan sebagai **argumen** dalam tanda kurung. Tanda plus (+) bisa dipakai untuk menggabungkan lebih dari satu nilai data yang akan ditampilkan, biasanya digunakan di String (*concatenation*). Setiap penggunaan `println()` akan selalu **diakhiri dengan baris baru** pada tampilan outputnya. Berikut ini adalah contoh penggunaan `System.out.println()`.
 ```java
 System.out.println("Hello There"); // Hello There
 System.out.println("Hi " + "There"); // Hi There
@@ -30,9 +37,10 @@ System.out.println("10 + 5 = " + (10+5)); // 10 + 5 = 15
 System.out.println("10 + 5 = " + 10+5); // 10 + 5 = 105
 ```
 ### System.out.print()
-Metode ini serupa dengan metode `System.out.println()`, hanya saja metode ini **tidak diakhiri dengan baris baru** pada tampilan keluarannya. Dengan metode ini, maka output selanjutnya akan diletakkan pada baris yang sama.
+Method ini mirip dengan method `System.out.println()`, hanya saja method ini **tidak diakhiri dengan baris baru** pada tampilan outputnya. Dengan method ini, maka output selanjutnya akan diletakkan pada baris yang sama. Penerapannya biasa digunakan untuk meminta input dari user melalui console/terminal.  
+
 ### System.out.printf()
-Metode ini mirip dengan `System.out.print()`, tetapi dapat mengeluarkan **output dengan format tertentu**. Dengan format tertentu, output seperti tata letak, [[Struktur, Tipe Data, Konstanta, dan Variable Java#Tipe Data|tipe data]], presisi, dan sebagainya dapat diatur dengan format khusus.
+Method ini mirip dengan `System.out.print()`, tapi dapat mengeluarkan **output dengan format tertentu**. Dengan format tertentu, output seperti tata letak, presisi, dan sebagainya dapat diatur dengan format khusus.
 Spesifikasi format tersebut umumnya adalah `%[flags][width][.precision][type]`, dengan penjelasan sebagai berikut.
 
 | Format    | Keterangan                                                                 |
@@ -43,7 +51,7 @@ Spesifikasi format tersebut umumnya adalah `%[flags][width][.precision][type]`, 
 |           | - (+)  : Menampilkan tanda positif (+) atau negatif (-)                    |
 | width     | Menentukan jumlah kolom yang disediakan                                    |
 | precision | Menentukan jumlah angka di belakang titik desimal (untuk bilangan pecahan) |
-| type      | Menentukan tipe variabel/nilai data yang akan ditampilkan                                                                           |
+| type      | Menentukan tipe variabel/nilai data yang akan ditampilkan                  |
 
 #### Type Format
 Berikut ini adalah berbagai type format yang bisa digunakan dalam `System.out.printf()`.
@@ -58,23 +66,27 @@ Berikut ini adalah berbagai type format yang bisa digunakan dalam `System.out.pr
 | f           | Menampilkan bilangan pecahan (titik desimal)                   |
 | E atau e    | Menampilkan bilangan pecahan eksponensial                      |
 | G atau g    | Menampilkan bilangan pecahan                                   |
-| p           | Menampilkan pointer objek                                                               |
+| p           | Menampilkan pointer objek                                      |
+
 #### Format Character
-Berikut ini adalah berbagai format [[Struktur, Tipe Data, Konstanta, dan Variable Java#Tipe Data|character]] yang bisa digunakan dalam `System.out.printf()`.
+Berikut ini adalah berbagai format **karakter** yang bisa digunakan dalam `System.out.printf()`.
 
 | Kode Format | Keterangan                                           |
 | ----------- | ---------------------------------------------------- |
 | "%c"        | Menampilkan sebuah karakter tunggal terformat        |
 | "%nc"       | Menampilkan sebuah karakter lebar n kolom rata kanan |
-| "%-nc"      | Menampilkan sebuah karakter lebar n kolom rata kiri                                                     |
+| "%-nc"      | Menampilkan sebuah karakter lebar n kolom rata kiri  |
+
 Contoh penggunaan format character adalah sebagai berikut.
+
 ```java
 System.out.printf("&c\n", 65); // A
 System.out.printf("&5c&5c&5c\n", 65, 66, 67); //     A    B    C
 System.out.printf("&-5c&-5c&-5c\n", 65, 66, 67); // A    B    C    
 ```
+
 #### Format String
-Berikut ini adalah berbagai format [[Struktur, Tipe Data, Konstanta, dan Variable Java#Tipe Data|string]] yang bisa digunakan dalam `System.out.printf()`.
+Berikut ini adalah berbagai format **string** yang bisa digunakan dalam `System.out.printf()`.
 
 | Kode Format | Keterangan                                                                     |
 | ----------- | ------------------------------------------------------------------------------ |
@@ -82,7 +94,7 @@ Berikut ini adalah berbagai format [[Struktur, Tipe Data, Konstanta, dan Variabl
 | "%ns"       | Menampilkan sebuah nilai String lebar n kolom rata kanan                       |
 | "%-ns"      | Menampilkan sebuah nilai String lebar n kolom rata kiri                        |
 | "%n.ms"     | Menampilkan rata kanan hanya m buah karakter pertama saja dengan lebar n kolom |
-| "%-n.ms"    | Menampilkan rata kiri hanya m buah karakter pertama saja dengan lebar n kolom                                                                               |
+| "%-n.ms"    | Menampilkan rata kiri hanya m buah karakter pertama saja dengan lebar n kolom  |
 Contoh penggunaan format string dapat dilihat dalam kode di bawah ini.
 ```java
 System.out.printf("%s%c\n", "Pemrograman Java", '|'); 
@@ -101,7 +113,7 @@ Pemro                         |
 */
 ```
 #### Format Desimal Integer
-Berikut ini adalah berbagai format [[Struktur, Tipe Data, Konstanta, dan Variable Java#Tipe Data|desimal integer]] yang bisa digunakan dalam `System.out.printf()`.
+Berikut ini adalah berbagai format **desimal integer** yang bisa digunakan dalam `System.out.printf()`.
 
 | Kode Format | Keterangan                                                                          |
 | ----------- | ----------------------------------------------------------------------------------- |
@@ -110,7 +122,7 @@ Berikut ini adalah berbagai format [[Struktur, Tipe Data, Konstanta, dan Variabl
 | "%-nd"      | Menampilkan sebuah nilai integer terformat n kolom rata kiri                        |
 | "%+nd"      | Menampilkan nilai integer terformat dengan tanda (+/-) n kolom rata kanan           |
 | "%-+nd"     | Menampilkan nilai integer terformat dengan tanda (+/-) n kolom rata kiri            |
-| "%0nd"      | Menampilkan sebuah nilai integer terformat n kolom rata kanan dengan blank berupa 0 |            |                                                                                     |
+| "%0nd"      | Menampilkan sebuah nilai integer terformat n kolom rata kanan dengan blank berupa 0 |  |  |
 Berikut ini adalah contoh cara menampilkan desimal integer terformat.
 ```java
 int x = 1234;
@@ -134,7 +146,7 @@ System.out.printf("%d %+08d %+08d %+08d\n",x,x,y,z);
 */
 ```
 #### Format Hexadecimal
-Berikut ini adalah berbagai format hexadecimal yang bisa digunakan dalam `System.out.printf()`.
+Berikut ini adalah berbagai format **hexadecimal** yang bisa digunakan dalam `System.out.printf()`.
 
 | Kode Format      | Keterangan                                                                            |
 | ---------------- | ------------------------------------------------------------------------------------- |
@@ -144,7 +156,7 @@ Berikut ini adalah berbagai format hexadecimal yang bisa digunakan dalam `System
 | "%-nx", "-nX"    | Menampilkan format hexadecimal lebar n kolom rata kiri                                |
 | "%#x", "%#X"     | Menampilkan format hexadecimal diawali dengan "0x" atau "0X"                          |
 | "%#nx", "%#nX"   | Menampilkan format hexadecimal lebar n kolom rata kanan diawali dengan "0x" atau "0X" |
-| "%#-nx", "%#-nX" | Menampilkan format hexadecimal lebar n kolom rata kiri diawali dengan "0x" atau "0X"                                                                                      |
+| "%#-nx", "%#-nX" | Menampilkan format hexadecimal lebar n kolom rata kiri diawali dengan "0x" atau "0X"  |
 Contoh penggunaan format hexadecimal dapat dilihat dalam kode di bawah ini.
 ```java
 int x = 7654;
@@ -166,7 +178,7 @@ System.out.printf("%#x %#X %#-10x %#-10X\n",x,x,x,x);
 */
 ```
 #### Format Oktal
-Berikut ini adalah berbagai format oktal yang bisa digunakan dalam `System.out.printf()`.
+Berikut ini adalah berbagai format **oktal** yang bisa digunakan dalam `System.out.printf()`.
 
 | Kode Format | Keterangan                                                              |
 | ----------- | ----------------------------------------------------------------------- |
@@ -176,7 +188,7 @@ Berikut ini adalah berbagai format oktal yang bisa digunakan dalam `System.out.p
 | "%-no"      | Menampilkan format oktal lebar n kolom rata kiri                        |
 | "%#o"       | Menampilkan format oktal diawali dengan "0"                             |
 | "%#no"      | Menampilkan format oktal lebar n kolom rata kanan diawali dengan "0"    |
-| "%#-no"     | Menampilkan format oktal lebar n kolom rata kiri diawali dengan "0"                                                                        |
+| "%#-no"     | Menampilkan format oktal lebar n kolom rata kiri diawali dengan "0"     |
 Berikut ini adalah contoh cara menampilkan oktal terformat.
 ```java
 int x = 7654;
@@ -196,9 +208,10 @@ System.out.printf("%o %-10o%c\n", x, x, '|');
 16746     016746|
 16746 16746     |
 */
+
 ```
 #### Format Desimal Pecahan (Float)
-Berikut ini adalah berbagai format [[Struktur, Tipe Data, Konstanta, dan Variable Java#Tipe Data|desimal pecahan (float)]] yang bisa digunakan dalam `System.out.printf()`.
+Berikut ini adalah berbagai format **floating point** yang bisa digunakan dalam `System.out.printf()`.
 
 | Kode Format | Keterangan                                                                                                                        |
 | ----------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -209,7 +222,7 @@ Berikut ini adalah berbagai format [[Struktur, Tipe Data, Konstanta, dan Variabl
 | "%-nf"      | Menampilkan sebuah nilai float integer terformat n kolom rata kiri                                                                |
 | "%n.mf"     | Menampilkan sebuah nilai float integer terformat n kolom rata kanan dengan m digit di belakang titik desimal                      |
 | "%0n.mf"    | Menampilkan sebuah nilai float integer terformat n kolom rata kanan dengan m digit di belakang titik desimal dan blank berupa "0" |
-| "%-+n.mf"   | Menampilkan sebuah nilai float terformat dengan tanda (+/-) n kolom rata kiri dengan m digit di belakang titik desimal                                                                                                                                  |
+| "%-+n.mf"   | Menampilkan sebuah nilai float terformat dengan tanda (+/-) n kolom rata kiri dengan m digit di belakang titik desimal            |
 Berikut ini adalah contoh cara menampilkan float terformat.
 ```java
 float x = 7654.123456789F;
@@ -228,7 +241,11 @@ System.out.printf("%f %20f %+30.19f\n", d, d, d);
 */
 ```
 #### Format Tabel
-Berikut ini adalah contoh untuk membuat tabel menggunakan metode pemformatan float.
+Berikut ini adalah contoh untuk membuat **tabel** menggunakan metode pemformatan float.
+
+:::warning Kalau masih belum paham mengenai perulangan, lebih baik skip dulu aja.
+:::
+
 ```java
 int n; double l; double fb;
 System.out.printf("TABEL FAKTOR BUNGA MAJEMUK\n\n");
@@ -264,7 +281,7 @@ System.out.println();
 */
 ```
 #### Format Bilangan, Mata Uang, dan Persentase
-Java menyediakan beragam format yang lazim digunakan, misalnya bilangan, mata uang, dan persentase. Untuk memperoleh format bilangan, mata uang, dan persentase, maka dapat dilakukan dengan memanggil metode barikut dari class `NumberFormat`.
+Java menyediakan beragam format yang umum digunakan, misalnya **bilangan, mata uang**, dan **persentase**. Untuk memperoleh format bilangan, mata uang, dan persentase, maka dapat dilakukan dengan memanggil metode barikut dari class `NumberFormat`.
 ```java
 getNumberInstance()
 getCurrencyInstance()
@@ -276,6 +293,7 @@ getNumberInstance(Locale.GERMANY)
 getCurrencyInstance(Locale.GERMANY)
 getPercentInstance(Locale.GERMANY)
 ```
+
 Contoh dari pemformatan bilangan, mata uang, dan persentase ada pada kode di bawah ini.
 ```java
 import java.text.NumberFormat;
@@ -316,16 +334,16 @@ Scanner input = new Scanner(System.in);
 ### Metode Input Data
 Dalam class `Scanner`, ada beberapa metode yang bisa digunakan, yaitu sebagai berikut.
 
-| Metode        | Kegunaan                    |
-| ------------- | --------------------------- |
-| next();       | Memasukkan string (kata)    |
-| nextLine();   | Memasukkan string (kalimat) |
-| nextByte();   | Memasukkan bilangan (byte)  |
-| nextShort();  | Memasukkan bilangan (short) |
-| nextInt();    | Memasukkan bilangan (int)   |
-| nextLong();   | Memasukkan bilangan (long)  |
-| nextFloat();  | Memasukkan bilangan (float) |
-| nextDouble(); | Memasukkan bilangan (double)                            |
+| Metode        | Kegunaan                     |
+| ------------- | ---------------------------- |
+| next();       | Memasukkan string (kata)     |
+| nextLine();   | Memasukkan string (kalimat)  |
+| nextByte();   | Memasukkan bilangan (byte)   |
+| nextShort();  | Memasukkan bilangan (short)  |
+| nextInt();    | Memasukkan bilangan (int)    |
+| nextLong();   | Memasukkan bilangan (long)   |
+| nextFloat();  | Memasukkan bilangan (float)  |
+| nextDouble(); | Memasukkan bilangan (double) |
 Di bawah ini merupakan kode yang berfungsi untuk mengambil input dari user dan menampilkannya kembali.
 ```java
 import java.util.Scanner;
