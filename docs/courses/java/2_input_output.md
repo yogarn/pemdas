@@ -323,18 +323,25 @@ double 100000./3/ berformat persentase : 3.333.333 %
 */
 ```
 ## Operasi Input
-Operasi input merupakan sebuah operasi untuk **menyimpan nilai data** ke variabel tertentu melalui peralatan I/O, seperti keyboard, disk, dan lain sebagainya. Peralatan input standard adalah keyboard. Simbol untuk input yang umum digunakan dalam flowchart adalah berbentuk jajar genjang. Operasi input di Java melalui peralatan input standard dapat dilakukan dengan menggunakan class `Scanner`.
+Operasi input merupakan sebuah operasi untuk **menyimpan nilai data** ke variabel tertentu melalui peralatan I/O, seperti keyboard, disk, dan lain sebagainya. Peralatan input standard adalah keyboard. 
 
-Penggunaan class `Scanner` memerlukan deklarasi import dan inisiasi objek sebagai berikut.
+:::tip Simbol untuk input yang umum digunakan dalam flowchart adalah berbentuk jajar genjang.
+:::
+
+Operasi input di Java melalui peralatan input standard dapat dilakukan dengan menggunakan class `Scanner`. Penggunaan class `Scanner` **memerlukan deklarasi import dan instansiasi objek** sebagai berikut.
+
 ```java
+// import Scanner
 import java.util.Scanner;
 
+// instansiasi Scanner
 Scanner input = new Scanner(System.in);
 ```
-### Metode Input Data
-Dalam class `Scanner`, ada beberapa metode yang bisa digunakan, yaitu sebagai berikut.
 
-| Metode        | Kegunaan                     |
+### Method Input Data
+Dalam class `Scanner`, ada beberapa method yang bisa digunakan, yaitu sebagai berikut.
+
+| Method        | Kegunaan                     |
 | ------------- | ---------------------------- |
 | next();       | Memasukkan string (kata)     |
 | nextLine();   | Memasukkan string (kalimat)  |
@@ -344,6 +351,7 @@ Dalam class `Scanner`, ada beberapa metode yang bisa digunakan, yaitu sebagai be
 | nextLong();   | Memasukkan bilangan (long)   |
 | nextFloat();  | Memasukkan bilangan (float)  |
 | nextDouble(); | Memasukkan bilangan (double) |
+
 Di bawah ini merupakan kode yang berfungsi untuk mengambil input dari user dan menampilkannya kembali.
 ```java
 import java.util.Scanner;
@@ -387,7 +395,8 @@ Nilai Float : 89.787651
 Nilai Double : 89.123456789012350000
 */
 ```
-Input dua atau lebih variabel juga dapat dilakukan dalam satu line yang dipisahkan oleh space. Sebagai contoh adalah sebagai berikut.
+:::tip Input dua atau lebih variabel juga dapat dilakukan dalam satu line yang dipisahkan oleh space. Sebagai contoh adalah sebagai berikut.
+:::
 ```java
 int panjang, lebar, tinggi, volume;
 Scanner input = new Scanner(System.in);
@@ -404,7 +413,8 @@ Panjang, Lebar, dan Tinggi : 3 6 9 // input
 Volume                     : 162 // hasil perkalian dari panjang, lebar, dan tinggi (3 * 6 * 9).
 */
 ```
-Dalam contoh lain, penggunaan input yang berasal dari satu line juga bisa diterapkan di berbagai [[Struktur, Tipe Data, Konstanta, dan Variable Java#Tipe Data|tipe data]]. Misalnya antara integer, float, dan long. Hal tersebut dapat dilihat dari contoh berikut ini.
+Dalam contoh lain, penggunaan input yang berasal dari satu line juga bisa diterapkan di berbagai tipe data. Misalnya antara integer, float, dan long. Hal tersebut dapat dilihat dari contoh berikut ini.
+
 ```java
 int nilaiInteger;
 float nilaiFloat;
@@ -426,7 +436,9 @@ Float                      : 3.140000
 Long                       : 123456789
 */
 ```
-Namun, perlu diperhatikan bahwa apabila dalam satu line terdapat string, maka digunakan `next()` alih-alih `nextLine()`. Sebagai contoh dapat dilihat dalam kode berikut.
+:::warning Perlu diperhatikan bahwa apabila dalam satu line terdapat string, maka kita harus pakai `next()` dan **bukan** `nextLine()`. 
+:::
+
 ```java
 Scanner input = new Scanner(System.in);
 System.out.printf("%-25s %s", "Integer, String, dan Long", " : ");
@@ -447,9 +459,11 @@ String 1                   : hello
 String 2                   : there
 Long                       : 1234567
 */
+
 ```
 ### Permasalahan Umum nextLine();
 Ketika menggunakan `nextLine()`, biasanya muncul masalah yang biasa ditemui apabila menempatkan `nextLine()` setelah input bilangan seperti `nextInt();`. Hal tersebut disebabkan karena `nextLine()` membaca karakter newline yang tersisa dari bilangan sebelumnya. Masalah ini biasanya muncul ketika kita menggunakan multi-line input. Contoh dari permasalahan ini dapat dilihat sebagai berikut.
+
 ```java
 Scanner input = new Scanner(System.in);
 System.out.printf("%-10s %s", "Integer", " : ");
@@ -472,13 +486,21 @@ String      :
 Long        : 123456789
 */
 ```
-Seperti yang dapat dilihat dalam kode di atas, input dari integer masih berjalan normal. Namun, ketika memasuki input string dan long, input dari string akan terlewati dan program langsung meminta input untuk long. Seperti yang sudah dijelaskan sebelumnya, hal ini disebabkan oleh `nextLine()` yang masih membaca sisa-sisa dari `nextInt()` sebelumnya. Oleh karena itu, untuk mengatasi masalah ini, diperlukan `nextLine()` baru untuk membaca sisa-sisa dari `nextInt()`. Untuk lebih jelasnya, dapat dilihat dalam code berikut.
+
+Seperti yang dapat dilihat dalam kode di atas, input dari integer masih berjalan normal. Namun, ketika memasuki input string dan long, input dari string akan terlewati dan program langsung meminta input untuk long. Seperti yang sudah dijelaskan sebelumnya, hal ini disebabkan oleh `nextLine()` yang masih membaca sisa-sisa dari `nextInt()` sebelumnya. Oleh karena itu, untuk mengatasi masalah ini, diperlukan `nextLine()` baru untuk membaca sisa-sisa dari `nextInt()`.
+
+Untuk mengatasi hal tersebut, kita perlu mengonsumsi karakter *newline* setelah kita meminta memanggil `nextInt()`. Hal yang sama juga berlaku pada method lain yang punya delimiter *newline* atau *whitespace*. Contoh kode yang benar bisa dilihat di bawah ini.
+
 ```java
 Scanner input = new Scanner(System.in);
 System.out.printf("%-10s %s", "Integer", " : ");
 int nilaiInteger = input.nextInt();
 System.out.printf("%-10s %s", "String", " : ");
+
+// konsumsi sisa int sebelumnya
 input.nextLine();
+
+// input sudah bersih, sisa-sisa sudah dihabiskan oleh nextLine() sebelumnya.
 String nilaiString =  input.nextLine();
 System.out.printf("%-10s %s", "Long", " : ");
 long nilaiLong = input.nextLong();
@@ -497,44 +519,6 @@ String      : hello world
 Long        : 123456789
 */
 ```
-## Latihan
-### Program Operasi Input
-```java
-//input dan output yang diharapkan (3,2)
-/*
-Masukkan operator pertama : 3
-Masukkan operator kedua : 2
-Hasil penjumahan : 5
-Hasil pengurangan : 1
-Hasil perkalian : 6
-Hasil pembagian : 1.5
-*/
 
-//code
-import java.io.*;
-import java.text.DecimalFormat;
-import java.util.*;
-
-public class Pemdas_prak_3 {
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.printf("%-25s %s", "Masukkan operator pertama", ": ");
-        double pertama = input.nextDouble();
-        System.out.printf("%-25s %s", "Masukkan operator kedua", ": ");
-        double kedua = input.nextDouble();
-        DecimalFormat format = new DecimalFormat("0.#");
-        double penjumlahan = pertama + kedua;
-        double pengurangan = pertama - kedua;
-        double perkalian = pertama * kedua;
-        double pembagian = pertama / kedua;
-        System.out.printf("%-25s %s", "Hasil penjumlahan", ": ");
-        System.out.println(format.format(penjumlahan));
-        System.out.printf("%-25s %s", "Hasil pengurangan", ": ");
-        System.out.println(format.format(pengurangan));
-        System.out.printf("%-25s %s", "Hasil perkalian", ": ");
-        System.out.println(format.format(perkalian));
-        System.out.printf("%-25s %s", "Hasil pembagian", ": ");
-        System.out.println(format.format(pembagian));
-    }
-}
-```
+:::tip Intinya, ketika kita mau pakai `nextLine()`, dan ternyata sebelumnya terdapat input yang hanya mengambil data dengan delimiter whitespace, kita perlu menggunakan `nextLine()` terlebih dahulu untuk membersihkan input.
+:::
