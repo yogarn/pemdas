@@ -6,17 +6,37 @@ Creation: 2023-12-13
 chapter: 3
 ---
 # Simple Process
-Dikatakan proses sederhana (*simple*) karena dipandang sebagai **proses yang hanya mempunyai sebuah aliran masukan dan sebuah aliran keluaran**. Proses sederhana dalam pemrograman komputer terdiri atas : 
+Dikatakan proses sederhana (*simple*) karena dipandang sebagai **proses yang hanya mempunyai sebuah aliran input dan sebuah aliran output**. Proses sederhana dalam pemrograman komputer terdiri atas : 
 - Pemanggilan method atau procedure atau function
 - Perhitungan aritmetika atau logika
 ## Ekspresi
-Ekspresi merupakan proses sederhana dalam pemrograman komputer untuk melakukan proses **perhitungan aritmetika dan logika**. Prinsip dasar perhitungan aritmetika dan logika dalam pemrograman komputer adalah melakukan perhitungan aritmetika atau logika, kemudian hasilnya disimpan dalam variabel tertentu. 
+Ekspresi merupakan proses sederhana dalam pemrograman komputer untuk melakukan proses **perhitungan aritmetika dan logika**. Prinsip dasarnya adalah dengan melakukan perhitungan aritmetika atau logika, kemudian hasilnya disimpan dalam variabel tertentu. 
 
-Komponen utama ekspresi adalah **operand dan operator**. Operand dapat berupa variabel, konstanta, nilai data konstan, maupun fungsi. Setiap operand harus memiliki nilai data. Operator adalah simbol yang mengolah nilai pada operand dan menghasilkan satu nilai baru. Dalam pemrograman komputer, penulisan perhitungan aritmetika/logika tidak boleh bertingkat. Oleh karena itu, setiap operator memiliki precedence dan associativity.
+Komponen utama ekspresi adalah **operand dan operator**. 
+
+> Operand dapat berupa **variabel**, **konstanta**, **nilai data konstan**, maupun **fungsi**. Setiap **operand harus memiliki nilai data**. 
+
+> Operator adalah **simbol yang mengolah nilai** pada operand dan menghasilkan satu nilai baru. 
+
+Dalam pemrograman komputer, penulisan perhitungan aritmetika/logika tidak boleh bertingkat. Oleh karena itu, setiap operator memiliki **precedence** dan **associativity**.
+
+:::tip Proses di pemrograman kurang lebih sama seperti di matematika, hanya saja lebih dibatasi pada aturan-aturan tertentu.
+:::
+
 ### Precedence dan Associativity
-Precedence menentukan urutan pengerjaan operator berdasarkan prioritas. Operator yang memiliki tingkat **precedence lebih tinggi** akan **dikerjakan lebih dahulu**. Associativity menentukan urutan pengerjaan operator berdasarkan lokasinya dalam sebuah ekspresi (dari kiri/kanan). Associativity berlaku untuk operator-operator yang memiliki precedence yang sama.
-### Prioritas dan Urutan Pengerjaan
-Dalam operasi yang ada di pemrograman, terdapat urutan prioritas yang akan dikerjakan terlebih dahulu, sama hal nya seperti pada matematika pada umumnya. Berikut ini adalah urutan pengerjaan yang ada pada pemrograman.
+> Precedence menentukan urutan pengerjaan operator berdasarkan prioritas. 
+
+Operator yang memiliki tingkat **precedence lebih tinggi** akan **dikerjakan lebih dahulu**. 
+
+> Associativity menentukan urutan pengerjaan operator berdasarkan lokasinya dalam sebuah ekspresi (dari kiri/kanan). 
+
+Associativity berlaku untuk operator-operator yang memiliki precedence yang sama.
+
+:::tip Sama seperti di perhitungan matematika, pengerjaan memiliki prioritas mana yang akan lebih dulu dikerjakan.
+:::
+
+### Tabel Prioritas dan Urutan Pengerjaan
+Berikut ini adalah urutan pengerjaan yang ada pada pemrograman.
 | Kategori                               | Simbol                  | Nama                          | Prioritas | Urutan Pengerjaan |
 | -------------------------------------- | ----------------------- | ----------------------------- | --------- | ----------------- |
 | Indeks larik, kurung, dan akses elemen | `[ ]`                   | Elemen array                  | 1         | Kiri-Kanan        |
@@ -48,22 +68,28 @@ Dalam operasi yang ada di pemrograman, terdapat urutan prioritas yang akan diker
 |                                        | `&`                     | Boolean AND                   |           |                   |
 |                                        | `^`                     | Bitwise XOR                   | 9         | Kiri-Kanan        |
 |                                        | `^`                     | Boolean XOR                   |           |                   |
-|                                        | `｜`                     | Bitwise OR                    | 10        | Kiri-Kanan        |
-|                                        | `｜`                     | Boolean OR                    |           |                   |
+|                                        | `｜`                    | Bitwise OR                    | 10        | Kiri-Kanan        |
+|                                        | `｜`                    | Boolean OR                    |           |                   |
 | Operator Logika                        | `&&`                    | Logika AND                    | 11        | Kiri-Kanan        |
-|                                        | `｜｜`                    | Logika OR                     | 12        | Kiri-Kanan        |
+|                                        | `｜｜`                  | Logika OR                     | 12        | Kiri-Kanan        |
 | Operator Ternary                       | `?:`                    | Operator kondisi              | 13        | Kanan-Kiri        |
 | Operator Penugasan Majemuk             | `=, +=, -=, *=, /=, %=` | Operator penugasan aritmetika | 14        | Kanan-Kiri        |
-|                                        | `&=, ^=, ｜=, <<=, >>=`  | Operator penugasan bitwise    |           |                   |
+|                                        | `&=, ^=, ｜=, <<=, >>=` | Operator penugasan bitwise    |           |                   |
 ### Operator dengan Prioritas dan Urutan Pengerjaan
+
 $$
 x\leftarrow \frac{xy+yz}{xy-yz}
 $$
+
 Persamaan matematika di atas, apabila ditulis dalam bahasa pemrograman Java akan menjadi seperti berikut.
 ```java
 x = (x*y+y*z)/(x*y-y*z);
 ```
 Dalam kode tersebut, semua operasi perkalian dalam tanda kurung akan diselesaikan terlebih dahulu, lalu kemudian akan dijumlahkan dengan hasil perkalian lain. Kemudian, bagian atas (pembilang) akan dibagi dengan bagian bawah (penyebut). Terakhir, hasil semua operasi tersebut akan dimasukkan ke dalam variabel x.
+
+:::warning Ingat, operasi perkalian aritmetika di pemrograman harus menggunakan asterisk (*), tidak bisa langsung menggabungkan dua variabel yang berbeda.
+:::
+
 ## Operator
 Didasarkan atas jumlah operan (operand), operator dapat dibedakan menjadi tiga jenis, yaitu : 
 - **Unary Operator**
@@ -95,16 +121,16 @@ Digunakan untuk melakukan operasi logika matematika.
 | Simbol | Fungsi |
 | ------ | ------ |
 | `&&`   | AND    |
-| `｜｜`   | OR     |
-| `!`    | NOT       |
+| `｜｜` | OR     |
+| `!`    | NOT    |
 Tabel Kebenaran Operator Logika : 
 
 | A     | B     | !A    | A && B | A \|\| B |
 | ----- | ----- | ----- | ------ | -------- |
 | True  | True  | False | True   | True     |
 | True  | False | False | False  | True     |
-| False | True  | True  | False  | True         |
-| False | False | True  | False  |  False        |
+| False | True  | True  | False  | True     |
+| False | False | True  | False  | False    |
 Operand pada operator logika harus mempunyai nilai boolean, yaitu true atau false.
 ```java
 int x = 5, int y = 0, a;
@@ -114,16 +140,16 @@ b = (x > y) && (y >= 0) // ok
 ```
 ### Aritmetika
 Digunakan untuk melakukan berbagai operasi aritmetika sederhana.
-| Simbol | Fungsi              | Contoh       |
-| ------ | ------------------- | ------------ |
-| `+`    | Penambahan          | `x = y + 6`  |
-| `-`    | Pengurangan         | `y = x - 5`  |
-| `*`    | Perkalian           | `y = y * 3`  |
-| `/`    | Pembagian           | `z = x / y`  |
-| `%`    | Modulo              | `A = 10 % 3` |
-| `++`   | Increment           | `x++`        |
-| `--`   | Decrement           | `z--`        |
-| `()`   | Menaikkan Prioritas | `x = (2 + 3) * 5`             |
+| Simbol | Fungsi              | Contoh            |
+| ------ | ------------------- | ----------------- |
+| `+`    | Penambahan          | `x = y + 6`       |
+| `-`    | Pengurangan         | `y = x - 5`       |
+| `*`    | Perkalian           | `y = y * 3`       |
+| `/`    | Pembagian           | `z = x / y`       |
+| `%`    | Modulo              | `A = 10 % 3`      |
+| `++`   | Increment           | `x++`             |
+| `--`   | Decrement           | `z--`             |
+| `()`   | Menaikkan Prioritas | `x = (2 + 3) * 5` |
 #### Modulo
 Memiliki simbol `%` dan termasuk binary operator. Digunakan untuk **menghitung sisa hasil bagi**. Misalnya dalam kasus pengujian apakah integer `n` bernilai genap atau ganjil, dapat digunakan kode berikut.
 ```java
@@ -176,7 +202,7 @@ Setiap ekspresi yang berbentuk `<variabel> = <variabel><operator><exp>` dapat di
 | `a = a * b;` | `a *= b;`            |
 | `a = a / b;` | `a /= b;`            |
 | `a = a % b;` | `a %= b;`            |
-| `a = a ^ b;` | `a ^= b;`                     |
+| `a = a ^ b;` | `a ^= b;`            |
 Contohnya adalah sebagai berikut.
 ```java
 x *= y + 1;
@@ -194,7 +220,7 @@ Digunakan untuk **membandingkan dua nilai**, dan hasilnya **true atau false**.
 | `>`    | Lebih Besar Dari             |
 | `<=`   | Lebih Kecil atau Sama Dengan |
 | `>=`   | Lebih Besar atau Sama Dengan |
-| `?:`   | Conditional Assignment                             |
+| `?:`   | Conditional Assignment       |
 #### Conditional Expressions
 Conditional Expressions menggunakan **ternary operator** (`?:`)
 `sintaksis =  exp1 ? exp2 : exp3;`
@@ -216,7 +242,7 @@ Operasi bitwise sebenarny mirip dengan logika matematika sederhana, tetapi bitwi
 | `^`    | XOR          | `A ^ B`  |
 | `~`    | Complement 1 | `~A`     |
 | `>>`   | Shift Right  | `A >> 3` |
-| `<<`   | Shift Left   | `B << 2`         |
+| `<<`   | Shift Left   | `B << 2` |
 Operasi Bitwise dilakukan bit per bit.
 ```java
 int a = 24; int b = 35; int c;
@@ -311,4 +337,4 @@ Kelas Math mempunyai sejumlah method sebagaimana dapat dilihat pada tabel beriku
 | tan(0)               | Menghasilkan nilai tangent                                                                          |
 | tanh()               | Menghasilkan nilai hyperbolic tangent                                                               |
 | toDegrees(x, angrad) | Menghasilkan nilai sudut dalam derajat sebagai hasil konversi dari argumen dalam radian             |
-| toDegrees(x, angdeg) | Menghasilkan nilai sudut dalam derajat sebagai hasil konversi dari argumen dalam derajat                                                                                                    | 
+| toDegrees(x, angdeg) | Menghasilkan nilai sudut dalam derajat sebagai hasil konversi dari argumen dalam derajat            |
