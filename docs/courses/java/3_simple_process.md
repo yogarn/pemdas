@@ -91,30 +91,38 @@ Dalam kode tersebut, semua operasi perkalian dalam tanda kurung akan diselesaika
 :::
 
 ## Operator
-Didasarkan atas jumlah operan (operand), operator dapat dibedakan menjadi tiga jenis, yaitu : 
+Didasarkan atas jumlah *operand*, operator dapat dibedakan menjadi tiga jenis, yaitu : 
 - **Unary Operator**
 	Memerlukan 1 Operand
 - **Binary Operator**
 	Memerlukan 2 Operand
 - **Ternary Operator**
 	Memerlukan 3 Operand
-### Penugasan (Assignment)
-Termasuk binary operator. Digunakan untuk memberikan nilai kepada suatu operand dengan sintak sebagai berikut.
+### Assignments
+Digunakan untuk memberikan nilai kepada suatu operand dengan sintak sebagai berikut.
 ```
 operand1 operator operand2
 ```
 `operand1` harus berupa variabel, sedangkan `operand2` dapat sembarang operand, termasuk variabel dari `operand1`. Urutan pengerjaan (associativity) operator penugasan dari kanan ke kiri. Berikut ini adalah contoh dari operator penugasan.
 ```java
-x = 2; // konstanta
+x = 2; // nilai literal
 x = y; // variabel lain
 x = 2 * y; // ekspresi
 a = sin(y); // fungsi
 ```
 Tipe hasil operasi disesuaikan dengan tipe operand sebelah kiri.
 ```java
-int x = 7/2; // nilai x sama dengan 3
-float y = 3; // nilai y sama dengan 3.000
+int x = 3/2; // nilai x sama dengan 1
+float y = 3/2f; // nilai y sama dengan 1.5
 ```
+
+:::tip Assignment merupakan contoh dari **binary operator**, **operand kedua akan dimasukkan pada operand pertama** (variabel).
+:::
+
+:::danger Pembagian integer akan mengembalikan nilai integer dengan pembulatan ke bawah. Jika ingin mendapatkan hasil yang akurat, gunakan double atau float.
+:::
+
+
 ### Logika
 Digunakan untuk melakukan operasi logika matematika.
 
@@ -150,6 +158,7 @@ Digunakan untuk melakukan berbagai operasi aritmetika sederhana.
 | `++`   | Increment           | `x++`             |
 | `--`   | Decrement           | `z--`             |
 | `()`   | Menaikkan Prioritas | `x = (2 + 3) * 5` |
+
 #### Modulo
 Memiliki simbol `%` dan termasuk binary operator. Digunakan untuk **menghitung sisa hasil bagi**. Misalnya dalam kasus pengujian apakah integer `n` bernilai genap atau ganjil, dapat digunakan kode berikut.
 ```java
@@ -157,7 +166,7 @@ n % 2 = 0; // genap
 n % 2 = 1; // ganjil
 ```
 #### Increment dan Decrement
-Memiliki simbol `++` untuk increment dan `--` untuk decrement. Termasuk **unary operator**. Increment berfungsi untuk menaikkan nilai [[Struktur, Tipe Data, Konstanta, dan Variable Java#Variabel|variabel]] dengan 1, sedangkan Decrement berfungsi untuk menurunkan nilai variabel dengan 1. Posisinya bisa di depan (pre) atau di belakang (post) variabel.
+Memiliki simbol `++` untuk increment dan `--` untuk decrement. Termasuk **unary operator**. Increment berfungsi untuk menaikkan nilai dari variabel dengan 1, sedangkan Decrement berfungsi untuk menurunkan nilai variabel dengan 1. Posisinya bisa di depan (pre) atau di belakang (post) variabel.
 ```java
 n++; // post increment
 ++n; // pre increment
@@ -193,6 +202,12 @@ a = 2
 i = 2
 */
 ```
+
+:::warning Perhatikan perbedaan postfix dengan prefix, keduanya memiliki perbedaan yang signifikan.
+:::
+
+#### Combined Operator
+
 Setiap ekspresi yang berbentuk `<variabel> = <variabel><operator><exp>` dapat diganti dengan `<variabel><operator> = <exp>`. Operator ini sering disebut dengan **Combined Operator**.
 
 | Ekspresi     | Dapat Diganti Dengan |
@@ -299,6 +314,10 @@ Terdapat pada paket `java.lang` yang diperlukan untuk berbagai operasi matematik
 public static final double E = 2.71828182845904523354;
 public static final double PI = 3.14159265358979323846;
 ```
+
+:::tip Bisa dibilang merupakan library yang akan mempermudah kerja kalian dalam berbagai operasi aritmetika.
+:::
+
 Kelas Math mempunyai sejumlah method sebagaimana dapat dilihat pada tabel berikut.
 
 | Method               | Keterangan                                                                                          |
