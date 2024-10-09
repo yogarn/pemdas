@@ -6,17 +6,17 @@ const javaSidebar = [
     items: [
       {
         text: `Struktur, Tipe Data, Konstanta, dan Variable Java`,
-        link: `${path}/1_struktur_tipe_data`,
+        link: `${path}/struktur_tipe_data`,
       },
-      { text: `Input & Output`, link: `${path}/2_input_output` },
+      { text: `Input & Output`, link: `${path}/input_output` },
       {
         text: `Simple Process`,
-        link: `${path}/3_simple_process`,
+        link: `${path}/simple_process`,
       },
-      { text: `Percabangan`, link: `${path}/4_if_condition` },
-      { text: `Perulangan`, link: `${path}/5_loop` },
-      { text: `Method`, link: `${path}/6_method` },
-      { text: `Array`, link: `${path}/7_array` },
+      { text: `Percabangan`, link: `${path}/seleksi_kondisi` },
+      { text: `Pengulangan`, link: `${path}/loop` },
+      { text: `Array`, link: `${path}/array` },
+      { text: `Method`, link: `${path}/method` },
     ],
   },
 ];
