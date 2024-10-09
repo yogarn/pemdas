@@ -231,7 +231,7 @@ boolean cek, lulus = false;
 ```
 
 ### Case
-Perlu diperhatikan bahwa penulisan variabel dalam Java biasanya menggunakan Camel Case atau Pascal Case. Berikut adalah contoh dari berbagai case yang sering digunakan dalam semua bahasa pemrograman.  
+Perlu diperhatikan bahwa penulisan variabel dalam Java biasanya menggunakan Camel Case atau Pascal Case, sementara itu, untuk penulisan konstanta bisa menggunakan screaming snake case. Berikut adalah contoh dari berbagai case yang sering digunakan dalam semua bahasa pemrograman.
 
 ```java
 int nilaiAkhir, nilaiTugas, nilaiPraktikum // camel case
