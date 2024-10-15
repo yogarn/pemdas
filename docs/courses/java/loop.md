@@ -77,6 +77,9 @@ Yes!
 Yes!
 */
 ```
+:::info Pada dasarnya, `break` dipakai untuk menghentikan seluruh looping
+:::
+
 ## Continue
 Berbeda dengan `break`, `continue` menghentikan perulangan pada iterasi yang sedang dijalankan saat itu, tapi tidak menghentikan seluruh `loop` / perulangan. Pada kode di bawah ini, `continue` diletakkan pada `if (i % 2 == 0)`, yang mana `continue` akan melewati instruksi setelahnya dan kembali lagi melakukan perulangan dengan nilai `i` yang sudah dinaikkan.
 ```java
@@ -90,3 +93,5 @@ for (int i = 0; i < 10; i++) {
 1 3 5 7 9
 */
 ```
+:::info Pada dasarnya, `continue` berfungsi untuk skip satu iterasi
+:::
