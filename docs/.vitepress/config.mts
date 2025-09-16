@@ -2,6 +2,7 @@ import { defineConfig } from "vitepress";
 import javaSidebar from "./sidebar/java";
 import footnote_plugin from "markdown-it-footnote";
 import mathjax3 from 'markdown-it-mathjax3';
+import mark from 'markdown-it-mark'
 
 export default defineConfig({
   title: "Pemrograman Dasar",
@@ -26,6 +27,7 @@ export default defineConfig({
     config: (md) => {
       md.use(footnote_plugin);
       md.use(mathjax3);
+      md.use(mark);
     },
   },
 });

@@ -1,0 +1,24 @@
+/* Light mode */
+:root {
+    --mark-bg: #fdf6e3;   /* warm beige */
+    --mark-text: #5b4636; /* soft brown */
+}
+
+/* Dark mode */
+.dark {
+    --mark-bg: #2a2a2a;   /* calm dark gray */
+    --mark-text: #e3d7c3; /* warm beige */
+}
+
+.vp-doc mark {
+    background-color: var(--mark-bg);
+    color: var(--mark-text);
+    padding: 0.15em 0.3em;
+    border-radius: 0.25em;
+}
+
+/* justify all markdown text */
+.vp-doc p {
+    text-align: justify;
+    text-justify: inter-word; /* optional, makes spacing look nicer */
+}
