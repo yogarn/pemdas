@@ -18,10 +18,6 @@ export default defineConfig({
     },
 
     socialLinks: [{ icon: "github", link: "https://github.com/yogarn/pemdas" }],
-    footer: {
-      message: "Released under the MIT License.",
-      copyright: "Copyright © 2024-present Yoga Raditya",
-    },
   },
   markdown: {
     config: (md) => {
