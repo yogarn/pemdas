@@ -9,6 +9,10 @@ const javaSidebar = [
         link: `${path}/`
       },
       {
+        text: `Hello World!`,
+        link: `${path}/hello-world`
+      },
+      {
         text: `Struktur, Tipe Data, Konstanta, dan Variable Java`,
         link: `${path}/struktur_tipe_data`,
       },
